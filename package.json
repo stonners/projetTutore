@@ -1,0 +1,14 @@
+{
+  "name": "DuelQuizz",
+  "version": "1.0.0",
+  "description": "Une application pour le projet WebService",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "gerald",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.0.4"
+  }
+}
