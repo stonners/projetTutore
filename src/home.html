@@ -35,5 +35,31 @@
 <button type="button" class="btn btn-dark">Quizz Solo</button><br><br>
 <button type="button" class="btn btn-dark">Quizz Duo</button>
 </div>
+<div id="div">
+
+</div>
+
+<script>
+    fetch('http://localhost:3000/people', {
+        method: 'GET'
+
+    }).then(response => response.json())
+        .then(json => test(json))
+        .catch(function (err) {
+            console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+        });
+    console.log("coucou");
+
+    function test(arg){
+
+let div = document.getElementById("div");
+
+        for (i=0;i<arg.length;i++){
+div.innerText= arg[i].name+" ";
+      //  document.write(arg[i].name+" ");
+        }
+
+    }
+</script>
 </body>
 </html>
