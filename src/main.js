@@ -6,7 +6,14 @@ let mainWindow;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 1800, height: 1200});
+  mainWindow = new BrowserWindow({
+    width: 1800,
+     height: 1200,
+icon:"assets/logo.png",
+title:'DuelQuizz',
+movable:true,
+fullscreen:false
+   });
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
@@ -28,3 +35,4 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
