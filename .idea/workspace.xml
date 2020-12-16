@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/verifCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifCo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
