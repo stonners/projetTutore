@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="div" align="center"></div>
+<script>
+    fetch('http://localhost:3000/theme', {
+        method: 'GET'
+
+    }).then(response => response.json())
+        .then(json => afficheTheme(json))
+        .catch(function (err) {
+            console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+        });
+
+
+    function afficheTheme(arg){
+
+        let body = document.getElementsByTagName("body");
+
+        for (i=0;i<arg.length;i++){
+
+            div = document.createElement("div");
+            div.setAttribute("align","center");
+
+            buttonQuizz = document.createElement("button");
+
+            buttonQuizz.innerText=arg[i].name;
+            buttonQuizz.setAttribute("class","btn btn-dark");
+
+            div.appendChild(buttonQuizz);
+        document.body.appendChild(div);
+
+        }
+
+    }
+</script>
+</body>
+</html>

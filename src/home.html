@@ -40,7 +40,7 @@
 </div>
 
 <script>
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/people', {
         method: 'GET'
 
     }).then(response => response.json())
@@ -55,7 +55,7 @@
 let div = document.getElementById("div");
 
         for (i=0;i<arg.length;i++){
-div.innerText= div.innerText + " "+arg[i].name+" ";
+div.innerText= arg[i].name+" ";
       //  document.write(arg[i].name+" ");
         }
 
