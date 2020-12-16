@@ -30,14 +30,20 @@
 
             buttonQuizz = document.createElement("button");
 
+
             buttonQuizz.innerText=arg[i].name;
             buttonQuizz.setAttribute("class","btn btn-dark");
+            buttonQuizz.setAttribute("onclick","QuizzStart()");
 
             div.appendChild(buttonQuizz);
         document.body.appendChild(div);
 
         }
 
+    }
+
+    function QuizzStart(){
+        document.location.href="quizzSoloStart.html";
     }
 </script>
 </body>
