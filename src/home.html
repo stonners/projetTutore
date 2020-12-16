@@ -32,15 +32,15 @@
 </nav>
 <br><br><br><br><br>
 <div align="center">
-<button type="button" class="btn btn-dark">Quizz Solo</button><br><br>
-<button type="button" class="btn btn-dark">Quizz Duo</button>
+<button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
+<button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
 </div>
 <div id="div">
 
 </div>
 
 <script>
-    fetch('http://localhost:3000/people', {
+    fetch('http://localhost:3000/admin', {
         method: 'GET'
 
     }).then(response => response.json())
@@ -55,11 +55,21 @@
 let div = document.getElementById("div");
 
         for (i=0;i<arg.length;i++){
-div.innerText= arg[i].name+" ";
+div.innerText= div.innerText+" "+ arg[i].name+" ";
       //  document.write(arg[i].name+" ");
         }
 
     }
+
+
+    function QuizzSolo(){
+        document.location.href="quizzSolo.html";
+    }
+
+    function QuizzDuo(){
+        document.location.href="quizzDuo.html";
+    }
+
 </script>
 </body>
 </html>
