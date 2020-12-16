@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/lp-test-framework-main-rest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaS/td5js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,9 +35,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\electron\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\electron\src" />
       <recent name="C:\wamp64\www\electron\src\css" />
@@ -53,8 +50,7 @@
       <updated>1607440129268</updated>
       <workItem from="1607440130455" duration="2659000" />
       <workItem from="1607868270500" duration="2261000" />
-      <workItem from="1607872272254" duration="3945000" />
-      <workItem from="1608128403606" duration="4777000" />
+      <workItem from="1607872272254" duration="1295000" />
     </task>
     <servers />
   </component>
@@ -62,10 +58,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2556" y="-108" key="FileChooserDialogImpl" timestamp="1608132966338">
+    <state x="-2556" y="-108" key="FileChooserDialogImpl" timestamp="1607872603347">
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
-    <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608132966338" />
+    <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1607872603347" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1607440405082" />
   </component>
 </project>
