@@ -1,0 +1,61 @@
+Index: src/home.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html>\r\n\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\r\n</head>\r\n<body>\r\n<nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">\r\n    <a class=\"navbar-brand\" href=\"\">DuelQuizz</a>\r\n\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <div class=\"nav-item active\">\r\n                <a class=\"nav-link\" href=\"\">Vos points : 0 &ensp;&ensp;&ensp;<span class=\"sr-only\">(current)</span></a>\r\n            </div>\r\n            <div class=\"nav-item active\">\r\n                <a class=\"nav-link\" href=\"\">Votre rang : x/x &ensp;&ensp;&ensp;<span class=\"sr-only\">(current)</span></a>\r\n            </div>\r\n\r\n            <div class=\"nav-item active\">\r\n                <a class=\"nav-link\" href=\"\">Deconnexion <span class=\"sr-only\">(current)</span></a>\r\n            </div>\r\n\r\n\r\n\r\n        </ul>\r\n    </div>\r\n</nav>\r\n<br><br><br><br><br>\r\n<div align=\"center\">\r\n<button type=\"button\" class=\"btn btn-dark\" onclick=\"QuizzSolo()\">Quizz Solo</button><br><br>\r\n<button type=\"button\" class=\"btn btn-dark\" onclick=\"QuizzDuo()\">Quizz Duo</button>\r\n</div>\r\n<div id=\"div\">\r\n\r\n</div>\r\n\r\n<script>\r\n    fetch('http://rest/api/product', {\r\n        method: 'GET'\r\n\r\n    }).then(response => response.json())\r\n        .then(json => test(json))\r\n        .catch(function (err) {\r\n            console.log(\"il y a eu un problème avec l'opération fetch : \" + err.message);\r\n        });\r\n    console.log(\"coucou\");\r\n\r\n    function test(arg){\r\n\r\nlet div = document.getElementById(\"div\");\r\n\r\n        for (i=0;i<arg.length;i++){\r\ndiv.innerText= div.innerText+\" \"+ arg[i].name+\" \";\r\n      //  document.write(arg[i].name+\" \");\r\n        }\r\n\r\n    }\r\n\r\n\r\n    function QuizzSolo(){\r\n        document.location.href=\"quizzSolo.html\";\r\n    }\r\n\r\n    function QuizzDuo(){\r\n        document.location.href=\"quizzDuo.html\";\r\n    }\r\n\r\n</script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/home.html	(revision f42802ef75bc91331df9bd23316272769e2f7483)
++++ src/home.html	(date 1608135092177)
+@@ -32,15 +32,15 @@
+ </nav>
+ <br><br><br><br><br>
+ <div align="center">
+-<button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
+-<button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
++    <button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
++    <button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
+ </div>
+ <div id="div">
+ 
+ </div>
+ 
+ <script>
+-    fetch('http://rest/api/product', {
++    fetch('http://localhost:3000/admin', {
+         method: 'GET'
+ 
+     }).then(response => response.json())
+@@ -52,11 +52,11 @@
+ 
+     function test(arg){
+ 
+-let div = document.getElementById("div");
++        let div = document.getElementById("div");
+ 
+         for (i=0;i<arg.length;i++){
+-div.innerText= div.innerText+" "+ arg[i].name+" ";
+-      //  document.write(arg[i].name+" ");
++            div.innerText= div.innerText+" "+ arg[i].name+" ";
++            //  document.write(arg[i].name+" ");
+         }
+ 
+     }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b80cf555-75af-435b-9ae4-8da07e32d286\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/home.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/home.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lNaiNOG4akhwi6DR7k06I6D03c\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../CoteServ/lp-test-framework-main-rest\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\wamp64\\www\\electron\\src\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\wamp64\\www\\electron\\src\" />\r\n      <recent name=\"C:\\wamp64\\www\\electron\\src\\css\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b80cf555-75af-435b-9ae4-8da07e32d286\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1607440129268</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1607440129268</updated>\r\n      <workItem from=\"1607440130455\" duration=\"2659000\" />\r\n      <workItem from=\"1607868270500\" duration=\"2261000\" />\r\n      <workItem from=\"1607872272254\" duration=\"3945000\" />\r\n      <workItem from=\"1608128403606\" duration=\"4777000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"-2556\" y=\"-108\" key=\"FileChooserDialogImpl\" timestamp=\"1608132966338\">\r\n      <screen x=\"-3440\" y=\"-350\" width=\"2293\" height=\"920\" />\r\n    </state>\r\n    <state x=\"-2556\" y=\"-108\" key=\"FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920\" timestamp=\"1608132966338\" />\r\n    <state x=\"740\" y=\"274\" key=\"FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040\" timestamp=\"1607440405082\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision f42802ef75bc91331df9bd23316272769e2f7483)
++++ .idea/workspace.xml	(date 1608135092307)
+@@ -54,7 +54,7 @@
+       <workItem from="1607440130455" duration="2659000" />
+       <workItem from="1607868270500" duration="2261000" />
+       <workItem from="1607872272254" duration="3945000" />
+-      <workItem from="1608128403606" duration="4777000" />
++      <workItem from="1608128403606" duration="5784000" />
+     </task>
+     <servers />
+   </component>

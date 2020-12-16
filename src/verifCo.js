@@ -9,5 +9,7 @@ function verifInf(){
     else{
         let text="veullier remplir les champs";
         $("#erreur").text(text) ;
+        $("#erreur").attr("display","block");
+
     }
 }
