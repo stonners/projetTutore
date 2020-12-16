@@ -32,8 +32,8 @@
 </nav>
 <br><br><br><br><br>
 <div align="center">
-<button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
-<button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
+    <button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
+    <button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
 </div>
 <div id="div">
 
@@ -52,11 +52,11 @@
 
     function test(arg){
 
-let div = document.getElementById("div");
+        let div = document.getElementById("div");
 
         for (i=0;i<arg.length;i++){
-div.innerText= div.innerText+" "+ arg[i].name+" ";
-      //  document.write(arg[i].name+" ");
+            div.innerText= div.innerText+" "+ arg[i].name+" ";
+            //  document.write(arg[i].name+" ");
         }
 
     }
