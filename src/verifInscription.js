@@ -3,45 +3,90 @@ $("#verif").on('click',verifInscrip);
 function verifInscrip(){
     let correct =true;
     let erreur="";
+    let focus=false;
+    $("#nom").css("border","2px solid black");
+    $("#prenom").css("border","2px solid black");
+    $("#email").css("border","2px solid black");
+    $("#password").css("border","2px solid black");
+    $("#confPassword").css("border","2px solid black");
 
-    if($("#nom").val() !==""){
-        erreur+="remplire le nom ";
+
+    if($("#nom").val() ==""){
+        $("#nom").css("border","2px solid red");
         correct =false;
+        if(focus===false){
+            $("#nom").focus();
+            focus=true;
+        }
     }
-    if($("#prenom").val() !==""){
-        erreur+="remplire le prenom ";
+    if($("#prenom").val() ==""){
+        $("#prenom").css("border","2px solid red");
         correct =false;
+        if(focus===false){
+            $("#prenom").focus();
+            focus=true;
+        }
     }
-    if($("#email").val() !==""){
-        erreur+="remplire l'email ";
+    if($("#email").val() ==""){
+        $("#email").css("border","2px solid red");
         correct =false;
+        if(focus===false){
+            $("#email").focus();
+            focus=true;
+        }
     }
-    if($("#password").val() !==""){
-        erreur+="remplire le mot de passe ";
+    if($("#password").val() ==""){
+        $("#password").css("border","2px solid red");
         correct =false;
+        if(focus===false){
+            $("#password").focus();
+            focus=true;
+        }
     }
-    if($("#confPassword").val() !==""){
-        erreur+="remplire le confirme mot de passe ";
+    if($("#confPassword").val() ==""){
+        $("#confPassword").css("border","2px solid red");
         correct =false;
+        if(focus===false){
+            $("##confPassword").focus();
+            focus=true;
+        }
     }
-    if($("#nom").val() !== $("#confPassword").val() ){
-        erreur+="le mot de passe et différent du mot de passe confirme";
+    if(new String($("#password").val())== new String($("#confPassword").val())) {
         correct =false;
+        if(focus===false){
+            $("#password").focus();
+            focus=true;
+        }
     }
     if(correct==false){
-        let text="veullier remplir les champs";
+        console.log($("#password").val());
+        console.log($("#confPassword").val());
+        let text="veullier remplir les champs en rouge";
         $("#erreur").text(text) ;
+        $("#erreur").css("visibility","visible");
     }
     else{
-       console.log("reussi")
+        fetch('http://localhost:3000/users/inscription?nom='+$("#nom").val()+'&prenom='+$("#prenom").val()+'&email='+$("#email").val()+'&password='+$("#password").val(), {
+            method: 'GET'
+
+        }).then(response => response.json())
+            .then(json => reponseVerif(json))
+            .catch(function (err) {
+                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+            });
     }
 }
 
 function reponseVerif(rep){
     if(rep['id']!==-1){
+        let text="se nom email est déja utilisé";
+        $("#email").css("border","2px solid red");
+        $("#erreur").text(text) ;
+        $("#erreur").css("visibility","visible");
     }
     else{
         let text="identifiant incorrecte";
         $("#erreur").text(text) ;
+
     }
 }
