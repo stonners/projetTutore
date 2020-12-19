@@ -13,7 +13,7 @@
 
 <script>
 
-    fetch('http://localhost:3000/questions', {
+    fetch('http://rest/api/questions', {
         method: 'GET'
 
     }).then(response => response.json())
@@ -34,7 +34,7 @@
 
             question = document.createElement("div");
 
-            question.innerText = arg[i].name;
+            question.innerText = arg[i].label;
             question.setAttribute("class", "h1");
             div.appendChild(question);
 
