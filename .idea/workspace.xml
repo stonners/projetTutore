@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizzSolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizzSoloStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSoloStart.html" afterDir="false" />
-    </list>
+    <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/rest" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +59,7 @@
       <workItem from="1608373550754" duration="1090000" />
       <workItem from="1608388387197" duration="72000" />
       <workItem from="1608389957145" duration="1232000" />
+      <workItem from="1608642613679" duration="794000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -87,10 +83,10 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608388456886">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-2556" y="-108" key="FileChooserDialogImpl" timestamp="1608642813801">
+      <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
-    <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608374049817" />
+    <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608642813801" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1608388456886" />
     <state x="-3068" y="-324" key="MergeDialog" timestamp="1608135189112">
       <screen x="-3440" y="-350" width="2293" height="920" />
