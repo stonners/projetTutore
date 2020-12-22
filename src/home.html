@@ -40,28 +40,6 @@
 </div>
 
 <script>
-    fetch('http://rest/api/product', {
-        method: 'GET'
-
-    }).then(response => response.json())
-        .then(json => test(json))
-        .catch(function (err) {
-            console.log("il y a eu un problème avec l'opération fetch : " + err.message);
-        });
-    console.log("coucou");
-
-    function test(arg){
-
-        let div = document.getElementById("div");
-
-        for (i=0;i<arg.length;i++){
-            console.log(arg[i]);
-            div.innerText= div.innerText+" "+ arg[i].title+" ";
-            //  document.write(arg[i].name+" ");
-        }
-
-    }
-
 
     function QuizzSolo(){
         document.location.href="quizzSolo.html";
