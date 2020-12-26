@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_12_2020_17_12_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_12_2020_17_12__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizzSolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizzSoloStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSoloStart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/inscription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verifInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifInscription.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/rest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/lp-test-framework-main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,7 +65,8 @@
       <workItem from="1608373550754" duration="1090000" />
       <workItem from="1608388387197" duration="72000" />
       <workItem from="1608389957145" duration="1232000" />
-      <workItem from="1608642613679" duration="1329000" />
+      <workItem from="1608642613679" duration="2048000" />
+      <workItem from="1608988604584" duration="6532000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -88,11 +90,11 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="-2556" y="-108" key="FileChooserDialogImpl" timestamp="1608647977641">
-      <screen x="-3440" y="-350" width="2293" height="920" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608988634561">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1608388456886" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1608988634561" />
     <state x="-3068" y="-324" key="MergeDialog" timestamp="1608135189112">
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
