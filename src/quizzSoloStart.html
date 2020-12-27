@@ -12,8 +12,10 @@
 
 
 <script>
-
-    fetch('http://projectarendre/api/questions', {
+    url=window.location.href;
+    idTheme=url.split("data=");
+    console.log(idTheme[1]);
+    fetch('http://projectarendre/api/questions/'+idTheme[1], {
         method: 'GET'
 
     }).then(response => response.json())
@@ -26,7 +28,7 @@
     function afficheQuestion(arg) {
 
         let body = document.getElementsByTagName("body");
-
+console.log(arg);
         for (i = 0; i < arg.length; i++) {
 
             div = document.createElement("div");
