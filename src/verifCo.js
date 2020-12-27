@@ -1,9 +1,9 @@
 $("#verif").on('click',verifInf);
 
 function verifInf(){
-
     if($("#password").val() !=="" && $("#username").val() !==""){
-        fetch('http://localhost:3000/users/connection?username='+$("#username").val()+"&password="+$("#password").val(), {
+        let api='http://projetarendre/api/user/login?username='+$("#username").val()+'&Password='+$("#password").val();
+        fetch(api, {
             method: 'GET'
 
         }).then(response => response.json())
@@ -21,15 +21,16 @@ function verifInf(){
     }
 }
 function reponseVerif(rep){
-    if(rep['id']!==-1){
+    console.log(rep);
+    if(rep==-2){
         let text="Identifiants invalid";
         $("#erreur").text(text) ;
         $("#erreur").css("visibility","visible");
     }
     else{
-        let text="identifiant correcte";
-        $("#erreur").text(text) ;
 
+        sessionStorage.setItem('token',rep);
+        document.location='home.html'
     }
 }
 
