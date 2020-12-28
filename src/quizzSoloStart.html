@@ -3,76 +3,136 @@
 <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
 </head>
+
 <body>
+<div id="div" align="center">
+    <div id="question"></div>
+</div>
 <div id="counter" align="center"></div>
-<div id="div" align="center"></div>
 <div id="reponse" class="alert alert-danger" style=" display: none" align="center"></div>
 
 
 <script>
-    url=window.location.href;
-    idTheme=url.split("data=");
-    console.log(idTheme[1]);
-    fetch('http://projectarendre/api/questions/'+idTheme[1], {
+    url = window.location.href;
+    idTheme = url.split("data=");
+    fetch('http://projectarendre/api/questions/' + idTheme[1], {
         method: 'GET'
 
     }).then(response => response.json())
-        .then(json => afficheQuestion(json))
+        .then(json => sauvegardeQuestion(json))
         .catch(function (err) {
             console.log("il y a eu un problème avec l'opération fetch : " + err.message);
         });
+    conteurQuestion = 0;
 
 
-    function afficheQuestion(arg) {
+    function sauvegardeQuestion(arg) {
 
-        let body = document.getElementsByTagName("body");
-console.log(arg);
+        tab = new Array();
+        tab2 = new Array();
+
+        maxQuestions = arg.length - 1;
         for (i = 0; i < arg.length; i++) {
-
-            div = document.createElement("div");
-            div.setAttribute("align", "center");
-
-            question = document.createElement("div");
-
-            question.innerText = arg[i].label;
-            question.setAttribute("class", "h1");
-            div.appendChild(question);
-
-            document.body.appendChild(div);
+            tab[i] = arg[i];
         }
 
+        var1 = entierAleatoire(0, maxQuestions);
+        var2 = entierAleatoire(0, maxQuestions);
+
+        while (var2 === var1) {
+            var2 = entierAleatoire(0, maxQuestions);
+        }
+        var3 = entierAleatoire(0, maxQuestions);
+
+        while (var3 === var1 || var3 === var2) {
+            var3 = entierAleatoire(0, maxQuestions);
+        }
+        var4 = entierAleatoire(0, maxQuestions);
+
+
+        while (var4 === var1 || var4 === var2 || var4 === var3) {
+            var4 = entierAleatoire(0, maxQuestions);
+        }
+        tab2[0] = tab[var1];
+
+        tab2[1] = tab[var2];
+        tab2[2] = tab[var3];
+        tab2[3] = tab[var4];
+        afficheQuestion(conteurQuestion);
+    }
+    function afficheQuestion(numberQuestion) {
+
+        console.log('http://projectarendre/api/possibleanswer/' + tab2[conteurQuestion].id);
+
+        body = document.getElementsByTagName("body");
+        div = document.getElementById("div");
+        question = document.getElementById("question");
+
+        question.innerText = tab2[numberQuestion].label;
+
+        question.setAttribute("class", "h1");
+        question.setAttribute("id", "question");
+        div.appendChild(question);
+
+        document.body.appendChild(div);
+        sauvegardeReponse();
+        counter(conteurQuestion);
+        conteurQuestion++;
     }
 
-    function counter() {
+
+
+    function counter(conteur) {
         let cpt = 10;
-
-        divCounter = document.getElementById("counter");
-        divCounter.setAttribute("class", "h1");
-        divCounter.innerText = cpt + "";
-        document.body.appendChild(divCounter);
-        setInterval(function () {
-            --cpt;
-            if (cpt > -1) {
-                divCounter.innerText = cpt + '';
-            } else {
-
-                console.log("c'est fini");
-
-                reponseDiv = document.getElementById("reponse");
-                reponseDiv.innerText = "Temps expiré";
-                reponseDiv.style.display = "block";
-                document.body.appendChild(reponseDiv);
-                clearInterval();
-
-            }
-        }, 1000);
-
-
+        if (conteur < 4) {
+            console.log(conteur);
+            divCounter = document.getElementById("counter");
+            divCounter.setAttribute("class", "h1");
+            divCounter.innerText = cpt + "";
+            document.body.appendChild(divCounter);
+            myVar = setInterval(function () {
+                --cpt;
+                if (cpt > -1) {
+                    divCounter.innerText = cpt + '';
+                }
+                if (cpt < 1) {
+                    //         console.log("c'est fini");
+                    reponseDiv = document.getElementById("reponse");
+                    reponseDiv.innerText = "Temps expiré";
+                    reponseDiv.style.display = "block";
+                    document.body.appendChild(reponseDiv);
+                    conteur++;
+                    afficheQuestion(conteur+1);
+                    cpt=10;
+                }
+            }, 1000);
+        }else {
+            cpt=0;
+            clearInterval(myVar);
+        }
+    }
+    function entierAleatoire(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    counter();
+    function sauvegardeReponse(){
+
+        fetch('http://projectarendre/api/possibleanswer/' + tab2[conteurQuestion].id, {
+            method: 'GET'
+
+        }).then(response => response.json())
+            .then(json => afficheReponse(json))
+            .catch(function (err) {
+                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+            });
+    }
+
+    function afficheReponse(arg){
+
+       console.log(arg);
+    }
+
 </script>
 </body>
 </html>
