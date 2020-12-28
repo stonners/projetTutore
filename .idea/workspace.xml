@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verifCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifCo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/projetARendre" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +66,8 @@
       <workItem from="1608642613679" duration="2048000" />
       <workItem from="1608988604584" duration="6532000" />
       <workItem from="1609074672085" duration="2536000" />
+      <workItem from="1609094844396" duration="599000" />
+      <workItem from="1609162416094" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
