@@ -70,7 +70,7 @@ function verifInscrip() {
         $("#erreur").css("visibility", "visible");
         console.log(correct);
     } else {
-
+        console.log("test");
         let firstName = $("#nom").val();
         let lastName = $("#prenom").val();
         let email = $("#email").val();
