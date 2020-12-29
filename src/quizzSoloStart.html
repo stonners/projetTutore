@@ -6,12 +6,15 @@
 </head>
 
 <body>
-<div id="div" align="center">
-    <div id="question"></div>
+<div id="MainDiv" align="center">
+    <div id="question">
+    </div>
+    <div id="counter" align="center"></div>
+    <div id="reponse" class="alert alert-danger" style=" display: none"></div>
 </div>
-<div id="counter" align="center"></div>
-<div id="reponse" class="alert alert-danger" style=" display: none" align="center"></div>
-
+<div id="divBlock"
+     style="display: flex; flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 80%">
+</div>
 
 <script>
     url = window.location.href;
@@ -61,36 +64,35 @@
         tab2[3] = tab[var4];
         afficheQuestion(conteurQuestion);
     }
+
     function afficheQuestion(numberQuestion) {
 
         console.log('http://projectarendre/api/possibleanswer/' + tab2[conteurQuestion].id);
 
         body = document.getElementsByTagName("body");
-        div = document.getElementById("div");
+        MainDiv = document.getElementById("MainDiv");
         question = document.getElementById("question");
 
         question.innerText = tab2[numberQuestion].label;
 
         question.setAttribute("class", "h1");
         question.setAttribute("id", "question");
-        div.appendChild(question);
+        MainDiv.appendChild(question);
 
-        document.body.appendChild(div);
         sauvegardeReponse();
         counter(conteurQuestion);
         conteurQuestion++;
     }
 
 
-
     function counter(conteur) {
-        let cpt = 10;
+        let cpt = 1000;
         if (conteur < 4) {
             console.log(conteur);
             divCounter = document.getElementById("counter");
             divCounter.setAttribute("class", "h1");
             divCounter.innerText = cpt + "";
-            document.body.appendChild(divCounter);
+            MainDiv.appendChild(divCounter);
             myVar = setInterval(function () {
                 --cpt;
                 if (cpt > -1) {
@@ -101,22 +103,23 @@
                     reponseDiv = document.getElementById("reponse");
                     reponseDiv.innerText = "Temps expiré";
                     reponseDiv.style.display = "block";
-                    document.body.appendChild(reponseDiv);
+                    MainDiv.appendChild(reponseDiv);
                     conteur++;
-                    afficheQuestion(conteur+1);
-                    cpt=10;
+                    afficheQuestion(conteur + 1);
+                    cpt = 10;
                 }
             }, 1000);
-        }else {
-            cpt=0;
+        } else {
+            cpt = 0;
             clearInterval(myVar);
         }
     }
+
     function entierAleatoire(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function sauvegardeReponse(){
+    function sauvegardeReponse() {
 
         fetch('http://projetarendre/api/possibleanswer/' + tab2[conteurQuestion].id, {
             method: 'GET'
@@ -128,11 +131,37 @@
             });
     }
 
-    function afficheReponse(arg){
+    function afficheReponse(arg) {
 
-       console.log(arg);
+        console.log(arg.length);
+        divReponse = document.getElementById("divBlock");
+        divReponse.textContent = ' ';
+        for (i = 0; i < arg.length; i++) {
+            response = document.createElement("div");
+
+            response.innerText = arg[i].label;
+
+            response.setAttribute("class", "h1");
+            response.setAttribute("id", "response");
+            response.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
+
+            response.onclick = clickResponse;
+            divReponse.appendChild(response);
+
+
+            /*sauvegardeReponse();
+            counter(conteurQuestion);
+            conteurQuestion++;
+    */
+        }
     }
 
+    function clickResponse() {
+        console.log(this.innerText);
+        clearInterval(myVar);
+        afficheQuestion(conteurQuestion);
+
+    }
 </script>
 </body>
 </html>
