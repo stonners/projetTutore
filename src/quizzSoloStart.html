@@ -86,7 +86,7 @@
 
 
     function counter(conteur) {
-        let cpt = 1000;
+        let cpt = 10;
         if (conteur < 4) {
             console.log(conteur);
             divCounter = document.getElementById("counter");
@@ -107,6 +107,7 @@
                     conteur++;
                     afficheQuestion(conteur + 1);
                     cpt = 10;
+
                 }
             }, 1000);
         } else {
@@ -159,8 +160,9 @@
     function clickResponse() {
         console.log(this.innerText);
         clearInterval(myVar);
+        if (conteurQuestion<4){
         afficheQuestion(conteurQuestion);
-
+        }
     }
 </script>
 </body>
