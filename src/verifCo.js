@@ -21,7 +21,6 @@ function verifInf(){
     }
 }
 function reponseVerif(rep){
-    console.log(rep);
     if(rep==-2){
         let text="Identifiants invalid";
         $("#erreur").text(text) ;
