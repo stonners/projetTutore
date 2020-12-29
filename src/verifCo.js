@@ -2,7 +2,7 @@ $("#verif").on('click',verifInf);
 
 function verifInf(){
     if($("#password").val() !=="" && $("#username").val() !==""){
-        let api='http://projectarendre/api/user/login?username='+$("#username").val()+'&Password='+$("#password").val();
+        let api='http://projetarendre/api/user/login?username='+$("#username").val()+'&Password='+$("#password").val();
         fetch(api, {
             method: 'GET'
 

@@ -83,7 +83,7 @@ function verifInscrip() {
         formData.append('password', password);
 
 
-        fetch('http://projectarendre/api/user/inscription/', {
+        fetch('http://projetarendre/api/user/inscription/', {
             method: 'POST',
             body: formData
         }).catch(function (err) {

@@ -16,7 +16,7 @@
 <script>
     url = window.location.href;
     idTheme = url.split("data=");
-    fetch('http://projectarendre/api/questions/' + idTheme[1], {
+    fetch('http://projetarendre/api/questions/' + idTheme[1], {
         method: 'GET'
 
     }).then(response => response.json())
@@ -118,7 +118,7 @@
 
     function sauvegardeReponse(){
 
-        fetch('http://projectarendre/api/possibleanswer/' + tab2[conteurQuestion].id, {
+        fetch('http://projetarendre/api/possibleanswer/' + tab2[conteurQuestion].id, {
             method: 'GET'
 
         }).then(response => response.json())

@@ -1,4 +1,4 @@
-fetch('http://projectarendre/api/themes', {
+fetch('http://projetarendre/api/themes', {
     method: 'GET'
 
 }).then(response => response.json())

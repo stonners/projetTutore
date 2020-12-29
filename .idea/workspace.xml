@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/afficheTheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/afficheTheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quizzSoloStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSoloStart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/verifCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifCo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/verifInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifInscription.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +70,7 @@
       <workItem from="1609074672085" duration="2536000" />
       <workItem from="1609094844396" duration="599000" />
       <workItem from="1609162416094" duration="7260000" />
-      <workItem from="1609247570091" duration="1505000" />
+      <workItem from="1609247570091" duration="1695000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
