@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/quizzSoloStart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_40__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_40__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_12_2020_14_42__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_12_2020_14_42__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2020_16_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2020_16_25__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/quizzSoloStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizzSoloStart.html" afterDir="false" />
     </list>
@@ -12,6 +18,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/projetARendre" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,6 +53,8 @@
       <recent name="C:\wamp64\www\electron\src\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\CoteServ\projetARendre" />
+      <recent name="C:\wamp64\www\electron" />
       <recent name="C:\wamp64\www\electron\src" />
     </key>
   </component>
@@ -68,6 +83,7 @@
       <workItem from="1609094844396" duration="599000" />
       <workItem from="1609162416094" duration="7260000" />
       <workItem from="1609247570091" duration="6206000" />
+      <workItem from="1609336340081" duration="8753000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -91,11 +107,11 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1609074707568">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1609336699951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1609074707568" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1609336699951" />
     <state x="-3068" y="-324" key="MergeDialog" timestamp="1608135189112">
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
