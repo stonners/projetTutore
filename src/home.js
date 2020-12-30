@@ -8,7 +8,9 @@ fetch(api, {
         console.log("il y a eu un problème avec l'opération fetch : " + err.message);
     });
 
-function Info(rep){console.log(rep.total);
+function Info(rep){
+    if(rep==0)
+        document.location='index.html';
     $("#point").text(rep.points);
     $("#classement").text(rep['rang']+'/'+rep['total']);
 }
