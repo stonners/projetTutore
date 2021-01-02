@@ -15,7 +15,7 @@ movable:true,
 fullscreen:false
    });
 
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
+  mainWindow.loadURL(`file://${__dirname}/html/index.html`);
 
   mainWindow.on('closed', () => {
     mainWindow = null;

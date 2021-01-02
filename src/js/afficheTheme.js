@@ -14,10 +14,10 @@ function afficheTheme(arg) {
 
     for (i = 0; i < arg.length; i++) {
 
-        div = document.createElement("div");
+        let div = document.createElement("div");
         div.setAttribute("align", "center");
 
-        buttonQuizz = document.createElement("button");
+        let buttonQuizz = document.createElement("button");
 
 
         buttonQuizz.innerText = arg[i].name;
@@ -41,6 +41,6 @@ function afficheTheme(arg) {
 
 function QuizzStart() {
     console.log(this.id);
-    maVar = this.id;
+    let maVar = this.id;
     document.location.href = "quizzSoloStart.html?data=" + maVar;
 }

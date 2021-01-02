@@ -1,7 +1,9 @@
-url = window.location.href;
-idTheme = url.split("data=");
-formReponse = new FormData();
-
+let url = window.location.href;
+let idTheme = url.split("data=");
+let formReponse = new FormData();
+let tabAleat = [];
+let conteurQuestion = 0;
+let myVar;
 fetch('http://projetarendre/api/questions/' + idTheme[1], {
     method: 'GET'
 
@@ -10,52 +12,49 @@ fetch('http://projetarendre/api/questions/' + idTheme[1], {
     .catch(function (err) {
         console.log("il y a eu un problème avec l'opération fetch : " + err.message);
     });
-conteurQuestion = 0;
+
 
 
 function sauvegardeQuestion(arg) {
+    let tabNorm = [];
 
-    tab = new Array();
-    tab2 = new Array();
-
-    maxQuestions = arg.length - 1;
-    for (i = 0; i < arg.length; i++) {
-        tab[i] = arg[i];
+    let maxQuestions = arg.length - 1;
+    for (let i = 0; i < arg.length; i++) {
+        tabNorm[i] = arg[i];
     }
 
-    var1 = entierAleatoire(0, maxQuestions);
-    var2 = entierAleatoire(0, maxQuestions);
+    let var1 = entierAleatoire(0, maxQuestions);
+    let var2 = entierAleatoire(0, maxQuestions);
 
     while (var2 === var1) {
         var2 = entierAleatoire(0, maxQuestions);
     }
-    var3 = entierAleatoire(0, maxQuestions);
+    let var3 = entierAleatoire(0, maxQuestions);
 
     while (var3 === var1 || var3 === var2) {
         var3 = entierAleatoire(0, maxQuestions);
     }
-    var4 = entierAleatoire(0, maxQuestions);
+    let var4 = entierAleatoire(0, maxQuestions);
 
 
     while (var4 === var1 || var4 === var2 || var4 === var3) {
         var4 = entierAleatoire(0, maxQuestions);
     }
-    tab2[0] = tab[var1];
+    tabAleat[0] = tabNorm[var1];
 
-    tab2[1] = tab[var2];
-    tab2[2] = tab[var3];
-    tab2[3] = tab[var4];
+    tabAleat[1] = tabNorm[var2];
+    tabAleat[2] = tabNorm[var3];
+    tabAleat[3] = tabNorm[var4];
 
     afficheQuestion(conteurQuestion);
 }
 
 function afficheQuestion(numberQuestion) {
 
-    body = document.getElementsByTagName("body");
-    MainDiv = document.getElementById("MainDiv");
-    question = document.getElementById("question");
+    let MainDiv = document.getElementById("MainDiv");
+    let question = document.getElementById("question");
 
-    question.innerText = tab2[numberQuestion].label;
+    question.innerText = tabAleat[numberQuestion].label;
 
     question.setAttribute("class", "h1");
     question.setAttribute("id", "question");
@@ -68,9 +67,10 @@ function afficheQuestion(numberQuestion) {
 
 
 function counter(conteur) {
+    let MainDiv = document.getElementById("MainDiv");
     let cpt = 10;
     if (conteur < 4) {
-        divCounter = document.getElementById("counter");
+        let divCounter = document.getElementById("counter");
         divCounter.setAttribute("class", "h1");
         divCounter.innerText = cpt + "";
         MainDiv.appendChild(divCounter);
@@ -105,7 +105,7 @@ function entierAleatoire(min, max) {
 
 function sauvegardeReponse() {
 
-    fetch('http://projetarendre/api/possibleanswer/' + tab2[conteurQuestion].id, {
+    fetch('http://projetarendre/api/possibleanswer/' + tabAleat[conteurQuestion].id, {
         method: 'GET'
 
     }).then(response => response.json())
@@ -118,10 +118,10 @@ function sauvegardeReponse() {
 function afficheReponse(arg) {
 
 
-    divReponse = document.getElementById("divBlock");
+    let divReponse = document.getElementById("divBlock");
     divReponse.textContent = ' ';
-    for (i = 0; i < arg.length; i++) {
-        response = document.createElement("div");
+    for (let i = 0; i < arg.length; i++) {
+        let response = document.createElement("div");
 
         response.innerText = arg[i].label;
 
@@ -141,20 +141,20 @@ function afficheReponse(arg) {
 }
 
 function clickResponse() {
-    tab2.id
+    //tabAleat.id
     // console.log(this.innerText);
     clearInterval(myVar);
     if (conteurQuestion < 4) {
 
-        console.log(tab2[conteurQuestion-1].id);
+        console.log(tabAleat[conteurQuestion-1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append( "question" + conteurQuestion, tab2[conteurQuestion-1].id);
+        formReponse.append( "question" + conteurQuestion, tabAleat[conteurQuestion-1].id);
 
         afficheQuestion(conteurQuestion);
     } else {
-        console.log(tab2[conteurQuestion-1].id);
+        console.log(tabAleat[conteurQuestion-1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append( "question" + conteurQuestion, tab2[conteurQuestion-1].id);
+        formReponse.append( "question" + conteurQuestion, tabAleat[conteurQuestion-1].id);
 
         //     user = sessionStorage.getItem("token");
         // formReponse.append(user, "user1");

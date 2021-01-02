@@ -11,7 +11,7 @@ function verifInscrip() {
     $("#confPassword").css("border", "2px solid black");
     console.log(correct);
 
-    if ($("#nom").val() == "") {
+    if ($("#nom").val() === "") {
         $("#nom").css("border", "2px solid red");
         correct = false;
         if (focus === false) {
@@ -20,7 +20,7 @@ function verifInscrip() {
         }
     }
     console.log(correct);
-    if ($("#prenom").val() == "") {
+    if ($("#prenom").val() === "") {
         $("#prenom").css("border", "2px solid red");
         correct = false;
         if (focus === false) {
@@ -29,7 +29,7 @@ function verifInscrip() {
         }
     }
     console.log(correct);
-    if ($("#email").val() == "") {
+    if ($("#email").val() === "") {
         $("#email").css("border", "2px solid red");
         correct = false;
         if (focus === false) {
@@ -38,7 +38,7 @@ function verifInscrip() {
         }
     }
     console.log(correct);
-    if ($("#password").val() == "") {
+    if ($("#password").val() === "") {
         $("#password").css("border", "2px solid red");
         correct = false;
         if (focus === false) {
@@ -47,11 +47,11 @@ function verifInscrip() {
         }
     }
     console.log(correct);
-    if ($("#confPassword").val() == "") {
+    if ($("#confPassword").val() === "") {
         $("#confPassword").css("border", "2px solid red");
         correct = false;
         if (focus === false) {
-            $("##confPassword").focus();
+            $("#confPassword").focus();
             focus = true;
         }
     }
@@ -64,7 +64,7 @@ function verifInscrip() {
         }
     }
     console.log(correct);
-    if (correct == false) {
+    if (correct === false) {
         let text = "veullier remplir les champs en rouge";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
