@@ -5,27 +5,27 @@
 </head>
 <body>
 
-<div id="erreur" class="alert alert-danger" style="visibility: hidden"></div>
+<div class="alert alert-danger" id="erreur" style="visibility: hidden"></div>
 <br>
-    <div class="form-group">
-        <label for="username">Nom d'utilisateur :</label>
-        <input class="form-control" type="text" name="username" id="username" maxlength="100"/>
-    </div>
+<div class="form-group">
+    <label for="username">Nom d'utilisateur :</label>
+    <input class="form-control" id="username" maxlength="100" name="username" type="text"/>
+</div>
 
-    <div class="form-group">
-        <label for="password">Mot de passe :</label>
-        <input class="form-control" type="password"  id="password"/>
-    </div>
+<div class="form-group">
+    <label for="password">Mot de passe :</label>
+    <input class="form-control" id="password" type="password"/>
+</div>
 
-    <div class="form-group mb-5">
-        <input class="form-control btn btn-success" type="button" id="verif" value="Connexion" />
-    </div>
-    <a href="inscription.html">créer un compte</a>
+<div class="form-group mb-5">
+    <input class="form-control btn btn-success" id="verif" type="button" value="Connexion"/>
+</div>
+<a href="inscription.html">créer un compte</a>
 </body>
 
 <script
-        src="https://code.jquery.com/jquery-3.5.1.min.js"
-       crossorigin="anonymous">
+        crossorigin="anonymous"
+        src="https://code.jquery.com/jquery-3.5.1.min.js">
 </script>
 <script src="../js/verifCo.js"></script>
 </html>

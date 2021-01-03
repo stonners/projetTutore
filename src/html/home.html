@@ -8,17 +8,18 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="">DuelQuizz</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarCollapse" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <div class="nav-item active">
-                <a class="nav-link" href="">Vos points :  <span  id="point"></span></a>
+                <a class="nav-link" href="">Vos points : <span id="point"></span></a>
             </div>
             <div class="nav-item active">
-                <a class="nav-link" href="">Votre rang : <span  id="classement"></span></a>
+                <a class="nav-link" href="">Votre rang : <span id="classement"></span></a>
             </div>
 
             <div class="nav-item active">
@@ -26,14 +27,14 @@
             </div>
 
 
-
         </ul>
     </div>
 </nav>
 <br><br><br><br><br>
 <div align="center">
-    <button type="button" class="btn btn-dark" onclick="QuizzSolo()">Quizz Solo</button><br><br>
-    <button type="button" class="btn btn-dark" onclick="QuizzDuo()">Quizz Duo</button>
+    <button class="btn btn-dark" onclick="QuizzSolo()" type="button">Quizz Solo</button>
+    <br><br>
+    <button class="btn btn-dark" onclick="QuizzDuo()" type="button">Quizz Duo</button>
 </div>
 <div id="div">
 
@@ -41,8 +42,8 @@
 
 
 <script
-        src="https://code.jquery.com/jquery-3.5.1.min.js"
-        crossorigin="anonymous">
+        crossorigin="anonymous"
+        src="https://code.jquery.com/jquery-3.5.1.min.js">
 </script>
 <script src="../js/home.js"></script>
 </body>

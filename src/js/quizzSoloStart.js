@@ -14,7 +14,6 @@ fetch('http://projetarendre/api/questions/' + idTheme[1], {
     });
 
 
-
 function sauvegardeQuestion(arg) {
     let tabNorm = [];
 
@@ -146,15 +145,15 @@ function clickResponse() {
     clearInterval(myVar);
     if (conteurQuestion < 4) {
 
-        console.log(tabAleat[conteurQuestion-1].id);
+        console.log(tabAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append( "question" + conteurQuestion, tabAleat[conteurQuestion-1].id);
+        formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
 
         afficheQuestion(conteurQuestion);
     } else {
-        console.log(tabAleat[conteurQuestion-1].id);
+        console.log(tabAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append( "question" + conteurQuestion, tabAleat[conteurQuestion-1].id);
+        formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
 
         //     user = sessionStorage.getItem("token");
         // formReponse.append(user, "user1");

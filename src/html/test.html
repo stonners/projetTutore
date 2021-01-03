@@ -1,14 +1,14 @@
-<input type="text" id="input" placeholder="Message…" />
-<hr />
+<input id="input" placeholder="Message…" type="text"/>
+<hr/>
 <pre id="output"></pre>
 
 <script>
-    var host   = 'ws://127.0.0.1:8889';
+    var host = 'ws://127.0.0.1:8889';
     var socket = null;
-    var input  = document.getElementById('input');
+    var input = document.getElementById('input');
     var output = document.getElementById('output');
-    var print  = function (message) {
-        var samp       = document.createElement('samp');
+    var print = function (message) {
+        var samp = document.createElement('samp');
         samp.innerHTML = message + '\n';
         output.appendChild(samp);
 
