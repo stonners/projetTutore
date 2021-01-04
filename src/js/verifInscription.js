@@ -86,26 +86,22 @@ function verifInscrip() {
         fetch('http://projetarendre/api/user/inscription/', {
             method: 'POST',
             body: formData
-        }).catch(function (err) {
-            console.log("il y a eu un problème avec l'opération fetch : " + err.message);
-        });
+        }).then(response => response.json())
+            .then(json => emailVerif(json))
+            .catch(function (err) {
+                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+            });
 
 
     }
+}
+function emailVerif(json) {
 
-    /*
-    function reponseVerif(rep){
-        if(rep['id']!==-1){
-            let text="se nom email est déja utilisé";
-            $("#email").css("border","2px solid red");
-            $("#erreur").text(text) ;
-            $("#erreur").css("visibility","visible");
-        }
-        else{
-            let text="identifiant incorrecte";
-            $("#erreur").text(text) ;
-
-        }
-
-    */
+     if (json!==0){
+    window.location = "../index.html";
+    }else {
+        let text = "email déja utiliser !";
+        $("#erreur").text(text);
+        $("#erreur").css("visibility", "visible");
+    }
 }

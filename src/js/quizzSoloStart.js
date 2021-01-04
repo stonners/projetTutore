@@ -60,26 +60,29 @@ function afficheQuestion(numberQuestion) {
     MainDiv.appendChild(question);
 
     sauvegardeReponse();
+    clearInterval(myVar);
     counter(conteurQuestion);
     conteurQuestion++;
 }
 
 
+let cpt = 10;
 function counter(conteur) {
+    console.log("conteur:" +conteur)
     let MainDiv = document.getElementById("MainDiv");
-    let cpt = 10;
     if (conteur < 4) {
         let divCounter = document.getElementById("counter");
         divCounter.setAttribute("class", "h1");
         divCounter.innerText = cpt + "";
         MainDiv.appendChild(divCounter);
         myVar = setInterval(function () {
+           console.log("testtttt")
             --cpt;
             if (cpt > -1) {
                 divCounter.innerText = cpt + '';
             }
             if (cpt < 1) {
-                //         console.log("c'est fini");
+                       console.log("c'est fini");
                 /* reponseDiv = document.getElementById("reponse");
                  reponseDiv.innerText = "Temps expiré";
                  reponseDiv.style.display = "block";
@@ -132,10 +135,6 @@ function afficheReponse(arg) {
         divReponse.appendChild(response);
 
 
-        /*sauvegardeReponse();
-        counter(conteurQuestion);
-        conteurQuestion++;
-*/
     }
 }
 
@@ -144,7 +143,7 @@ function clickResponse() {
     // console.log(this.innerText);
     clearInterval(myVar);
     if (conteurQuestion < 4) {
-
+cpt =10;
         console.log(tabAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
         formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
@@ -155,8 +154,9 @@ function clickResponse() {
         console.log("question" + conteurQuestion);
         formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
 
-        //     user = sessionStorage.getItem("token");
-        // formReponse.append(user, "user1");
+        user = sessionStorage.getItem("token");
+        console.log(user)
+        formReponse.append("user1", user);
 
         fetch('http://projetarendre/api/PossibleAnswer/correction/', {
             method: 'POST',
@@ -165,8 +165,31 @@ function clickResponse() {
             .catch(function (err) {
                 console.log("il y a eu un problème avec l'opération fetch : " + err.message);
             });
-        document.write("");
-        console.log('');
-    }
 
+        let divQuestion = document.getElementById("question");
+        //calculer les bonne réponses
+        divQuestion.innerText="Bravo, vous avez "+conteurQuestion+" bonnes réponses";
+        let divReponse = document.getElementById("divBlock");
+        divReponse.remove();
+        countdown();
+
+    }
+}
+
+let seconds=7;
+function countdown() {
+    seconds = seconds - 1;
+    if (seconds < 0) {
+        // Chnage your redirection link here
+        window.location = "home.html";
+    } else {
+        // Update remaining seconds
+        if (seconds>1){
+        document.getElementById("counter").innerHTML = "Vous allez être rediriger dans "+seconds+" secondes";
+        }else {
+            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans "+seconds+" seconde";
+        }
+        // Count down using javascript
+        window.setTimeout("countdown()", 1000);
+    }
 }

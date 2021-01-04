@@ -28,7 +28,7 @@ function reponseVerif(rep) {
     } else {
 
         sessionStorage.setItem('token', rep);
-        document.location = 'home.html'
+        document.location = 'html/home.html'
     }
 }
 
