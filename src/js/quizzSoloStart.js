@@ -1,7 +1,9 @@
 let url = window.location.href;
 let idTheme = url.split("data=");
+let formQuestion = new FormData();
 let formReponse = new FormData();
 let tabAleat = [];
+let tabReponse = [];
 let conteurQuestion = 0;
 let myVar;
 fetch('http://projetarendre/api/questions/' + idTheme[1], {
@@ -139,25 +141,35 @@ function afficheReponse(arg) {
 }
 
 function clickResponse() {
-    //tabAleat.id
-    // console.log(this.innerText);
+
+    console.log(this);
+     formReponse[conteurQuestion-1]=this.innerText;
     clearInterval(myVar);
     if (conteurQuestion < 4) {
 cpt =10;
         console.log(tabAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
+        formQuestion.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
 
         afficheQuestion(conteurQuestion);
     } else {
         console.log(tabAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
-        formReponse.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
+        formQuestion.append("question" + conteurQuestion, tabAleat[conteurQuestion - 1].id);
 
         user = sessionStorage.getItem("token");
         console.log(user)
-        formReponse.append("user1", user);
+        formQuestion.append("user1", user);
 
+        fetch('http://projetarendre/api/PossibleAnswer/save/', {
+            method: 'POST',
+            body: formQuestion
+        })
+            .catch(function (err) {
+                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+            });
+
+        console.log(formReponse);
         fetch('http://projetarendre/api/PossibleAnswer/correction/', {
             method: 'POST',
             body: formReponse
@@ -165,6 +177,7 @@ cpt =10;
             .catch(function (err) {
                 console.log("il y a eu un problème avec l'opération fetch : " + err.message);
             });
+
 
         let divQuestion = document.getElementById("question");
         //calculer les bonne réponses
@@ -176,8 +189,10 @@ cpt =10;
     }
 }
 
+
 let seconds=7;
 function countdown() {
+    console.log(tabReponse);
     seconds = seconds - 1;
     if (seconds < 0) {
         // Chnage your redirection link here
@@ -190,6 +205,6 @@ function countdown() {
             document.getElementById("counter").innerHTML = "Vous allez être rediriger dans "+seconds+" seconde";
         }
         // Count down using javascript
-        window.setTimeout("countdown()", 1000);
+      //  window.setTimeout("countdown()", 1000);
     }
 }

@@ -1,3 +1,13 @@
+let MainDiv = document.getElementById("MainDiv");
+let text = document.getElementById("text");
+
+text.innerText = "Veuiller choisir un thème";
+
+text.setAttribute("class", "h1");
+text.setAttribute("id", "question");
+MainDiv.appendChild(text);
+
+
 fetch('http://projetarendre/api/themes', {
     method: 'GET'
 
@@ -7,32 +17,27 @@ fetch('http://projetarendre/api/themes', {
         console.log("il y a eu un problème avec l'opération fetch : " + err.message);
     });
 
-
 function afficheTheme(arg) {
-
-    let body = document.getElementsByTagName("body");
-
-    for (i = 0; i < arg.length; i++) {
-
-        let div = document.createElement("div");
-        div.setAttribute("align", "center");
-
-        let buttonQuizz = document.createElement("button");
+    let option = document.createElement("option")
+    let select = document.getElementById("selectTheme");
+    option.innerText = "--Sélectionner un theme--";
+    select.appendChild(option);
 
 
-        buttonQuizz.innerText = arg[i].name;
+    for (let i = 0; i < arg.length; i++) {
+        let option = document.createElement("option")
+        option.setAttribute("align", "center");
+        option.setAttribute("id", arg[i].id);
 
-        buttonQuizz.setAttribute("id", arg[i].id);
-        buttonQuizz.setAttribute("name", "a");
-        buttonQuizz.setAttribute("class", "btn btn-dark");
+        option.setAttribute("value", arg[i].id);
+        option.innerText = arg[i].name;
+        select.appendChild(option);
         // buttonQuizz.setAttribute("onclick","QuizzStart("+this.text+")");
 
-        div.appendChild(buttonQuizz);
-        document.body.appendChild(div);
 
 
-        document.getElementById(arg[i].id).onclick = QuizzStart;
 
+        document.getElementById("selectTheme").onchange=QuizzStart;
     }
 
 
@@ -40,7 +45,7 @@ function afficheTheme(arg) {
 
 
 function QuizzStart() {
-    console.log(this.id);
-    let maVar = this.id;
-    document.location.href = "quizzSoloStart.html?data=" + maVar;
+    idTheme = document.getElementById("selectTheme").value;
+
+    document.location.href = "quizzSoloStart.html?data=" + idTheme;
 }
