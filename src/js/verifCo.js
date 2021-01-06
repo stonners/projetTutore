@@ -26,9 +26,9 @@ function reponseVerif(rep) {
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
     } else {
-
+console.log(rep.id)
         sessionStorage.setItem('token', rep);
-        document.location = 'html/home.html'
+    //    document.location = 'html/home.html'
     }
 }
 
