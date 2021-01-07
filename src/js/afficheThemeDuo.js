@@ -139,11 +139,12 @@ function countdown() {
         console.log(msgWebSocket[msgWebSocket.length - 1]);
 
         //pour recup les questions/reponses
-       // console.log(msgWebSocket[msgWebSocket.length - 1].questions);             <-------
+        // console.log(msgWebSocket[msgWebSocket.length - 1].questions);             <-------
         console.log(msgWebSocket[msgWebSocket.length - 1].possibleanswer)         //<-------
 
         window.clearTimeout(myVar2);
-        afficheReponse();
+        afficheReponse()
+        compteur();
     }
 
 
@@ -155,7 +156,7 @@ function afficheReponse() {
     for (let i=0;i<4;i++){
         tabNorm[i] = msgWebSocket[msgWebSocket.length - 1].possibleanswer[i];
     }
-  //  console.log(tabNorm)
+    //  console.log(tabNorm)
 
     let var1 = entierAleatoire(0, 3);
     let var2 = entierAleatoire(0, 3);
@@ -180,25 +181,63 @@ function afficheReponse() {
     tabReponseAleat[2] = tabNorm[var3];
     tabReponseAleat[3] = tabNorm[var4];
     console.log(tabReponseAleat)
-    let divReponse = document.getElementById("divBlock");
-    divReponse.textContent = ' ';
-    for (let i = 0; i < arg.length; i++) {
-        let response = document.createElement("div");
+    let divReponse = document.createElement("divBlock");
+    divReponse.setAttribute("style","display: flex;align-items: flex-start;")
 
-        response.innerText = tabReponseAleat[i].label;
-
-        response.setAttribute("class", "h1");
-        response.setAttribute("id", tabReponseAleat[i].id);
-        response.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
-
-        response.onclick = clickResponse;
-        divReponse.appendChild(response);
+    for (let i = 0; i < 4; i++) {
+        let res = document.createElement("div");
+        res.innerText = tabReponseAleat[i].label;
+        res.setAttribute("class", "h1");
+        res.setAttribute("id", tabReponseAleat[i].id);
+       // res.setAttribute("style","display: flex; flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 24%;height: 24%")
+        console.log(res);
+        res.onclick = clickResponse;
+        divReponse.append(res);
 
 
     }
+
+    document.body.appendChild(divReponse);
     function entierAleatoire(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
 
+}
+let cpt = 10;
+
+function compteur(){
+    let conteur=1;
+    if (conteur < 4) {
+        let divCounter = document.createElement("counter");
+        divCounter.setAttribute("class", "h1");
+        divCounter.innerText = cpt + "";
+        MainDiv.appendChild(divCounter);
+        myVar = setInterval(function () {
+            --cpt;
+            if (cpt > -1) {
+                divCounter.innerText = cpt + '';
+            }
+            if (cpt < 1) {
+                console.log("c'est fini");
+                /* reponseDiv = document.getElementById("reponse");
+                 reponseDiv.innerText = "Temps expiré";
+                 reponseDiv.style.display = "block";
+                 MainDiv.appendChild(reponseDiv);
+
+                */
+
+
+                cpt = 10;
+
+            }
+        }, 1000);
+    } else {
+        cpt = 0;
+        clearInterval(myVar);
+    }
+}
+
+function clickResponse(){
+    console.log(this.id);
 }
