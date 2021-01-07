@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dadd9bd5-8b04-42d3-a648-5826479c2d25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/testWebRTC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/testWebRTC.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../samples-gh-pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/projetARendre" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -153,14 +149,14 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610054304465">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610055547314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="228" key="FileChooserDialogImpl/0.0.1467.864@0.0.1467.864" timestamp="1609347072888" />
     <state x="566" y="228" key="FileChooserDialogImpl/0.0.1470.864@0.0.1470.864" timestamp="1610026350322" />
     <state x="568" y="228" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1610039658925" />
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610054304465" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610055547314" />
     <state x="311" y="29" key="MergeDialog" timestamp="1610041714534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,12 +171,13 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608139235534" />
-    <state x="474" y="181" key="Vcs.Push.Dialog.v2" timestamp="1609944220475">
-      <screen x="0" y="0" width="1470" height="864" />
+    <state x="619" y="218" key="Vcs.Push.Dialog.v2" timestamp="1610055390818">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="474" y="181" key="Vcs.Push.Dialog.v2/0.0.1470.864@0.0.1470.864" timestamp="1609944220475" />
     <state x="-2700" y="-157" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135316672" />
-    <state x="809" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610041625329">
+    <state x="619" y="218" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610055390818" />
+    <state x="809" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610055382869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="609" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1446.864@0.0.1446.864" timestamp="1609255997024" />
@@ -188,7 +185,7 @@
     <state x="619" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1470.864@0.0.1470.864" timestamp="1610026336496" />
     <state x="621" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1474.864@0.0.1474.864" timestamp="1610037052373" />
     <state x="-2475" y="24" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608139240500" />
-    <state x="809" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610041625329" />
+    <state x="809" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610055382869" />
     <state x="380" y="197" key="run.anything.popup" timestamp="1609255607671">
       <screen x="0" y="0" width="1446" height="864" />
     </state>
