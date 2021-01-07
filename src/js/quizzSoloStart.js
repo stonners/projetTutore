@@ -71,7 +71,6 @@ function afficheQuestion(numberQuestion) {
 
 let cpt = 10;
 function counter(conteur) {
-    console.log("conteur:" +conteur)
     let MainDiv = document.getElementById("MainDiv");
     if (conteur < 4) {
         let divCounter = document.getElementById("counter");
@@ -79,7 +78,6 @@ function counter(conteur) {
         divCounter.innerText = cpt + "";
         MainDiv.appendChild(divCounter);
         myVar = setInterval(function () {
-           console.log("testtttt")
             --cpt;
             if (cpt > -1) {
                 divCounter.innerText = cpt + '';
@@ -228,7 +226,7 @@ let seconds=7;
 function countdown() {
     seconds = seconds - 1;
     if (seconds < 0) {
-        // Chnage your redirection link here
+        // Change your redirection link here
         window.location = "home.html";
     } else {
         // Update remaining seconds

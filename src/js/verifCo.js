@@ -29,7 +29,7 @@ function reponseVerif(rep) {
 console.log(rep.id);
         sessionStorage.setItem('token', rep.token);
         sessionStorage.setItem('id',rep.id)
-    //    document.location = 'html/home.html'
+        document.location = 'html/home.html'
     }
 }
 

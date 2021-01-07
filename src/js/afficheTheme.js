@@ -1,6 +1,6 @@
 let MainDiv = document.getElementById("MainDiv");
 let text = document.getElementById("text");
-
+let count =0;
 text.innerText = "Veuiller choisir un thème";
 
 text.setAttribute("class", "h1");
@@ -41,6 +41,40 @@ function afficheTheme(arg) {
 
 }
 
+let idUser=sessionStorage.getItem("id");
+let socket = null;
+let msgWebSocket =[];
+let counter=0
+try {
+    socket = new WebSocket('ws://127.0.0.1:8889');
+    socket.onopen = function () {
+        socket.send(JSON.stringify({
+            type:'connect',
+            user_id: idUser
+        }));
+  /*      socket.send(JSON.stringify({
+            type:'forward',
+            user_id: idUser,
+            message:'test1'
+        }));*/
+
+    };
+    socket.onmessage = function (msg) {
+        console.log('Message received: ', msg.data);
+        msgWebSocket[counter]=JSON.parse(msg.data);
+        counter++;
+
+        return;
+    };
+    socket.onclose = function () {
+        console.log('connection is closed!');
+
+        return;
+    };
+} catch (e) {
+    console.log(e);
+}
+
 function QuizzStart() {
 
     var chemin = window.location.pathname;
@@ -49,46 +83,30 @@ function QuizzStart() {
         document.location.href = "quizzSoloStart.html?data=" + idTheme;
 console.log(idTheme);
     }else {
-        var socket = null;
-        try {
-            socket = new WebSocket('ws://127.0.0.1:8889');
-            socket.onopen = function () {
-                socket.send(JSON.stringify({
-                    type:'connect',
-                    user_id: 'user'
-                }));
-                socket.send(JSON.stringify({
-                    type:'forward',
-                    user_id: 'user',
-                    message:'test1'
-                }));
-                socket.send(JSON.stringify({
-                    type:'theme',
-                    themeId: idTheme
 
-                }));
-                socket.send(JSON.stringify({
-                    type:'quizz_duel_start',
-                    user_id: 
+        socket.send(JSON.stringify({
+            type:'quizz_duel_start',
+            user_id:idUser
+//continuer ca
+        }));
+        socket.send(JSON.stringify({
+            type:'theme',
+            themeId: idTheme
 
-                }));
-                console.log("test");
+        }));
 
-                return;
-            };
-            socket.onmessage = function (msg) {
-                console.log('Message received: ', msg.data);
 
-                return;
-            };
-            socket.onclose = function () {
-                console.log('connection is closed!');
+        let rechercheAdv =document.getElementById("rechercheAdv");
+        let text2=document.createElement("p");
+            text2.innerText = "En recherche d'adversaire!!!";
 
-                return;
-            };
-        } catch (e) {
-            console.log(e);
-        }
+        text2.setAttribute("class", "h1");
+        text2.setAttribute("id", "question");
+        text2.setAttribute("align", "center");
+        rechercheAdv.appendChild(text2);
+        document.body.appendChild(rechercheAdv);
 
+        document.write();
     }
+
 }
