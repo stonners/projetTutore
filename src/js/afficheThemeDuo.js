@@ -111,7 +111,7 @@ function QuizzStart() {
 
 
 function countdown() {
-    myVar2 = window.setTimeout("countdown()", 2000);
+    myVar2 = window.setTimeout("countdown()", 1000);
     console.log(msgWebSocket);
 //    console.log(msgWebSocket.length);
     window.clearTimeout(10)

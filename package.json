@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^11.0.4"
+  },
+  "dependencies": {
+    "webrtc": "^1.14.1"
   }
 }
