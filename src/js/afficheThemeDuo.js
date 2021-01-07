@@ -63,7 +63,7 @@ try {
         console.log('Message received: ', msg.data);
         msgWebSocket[counter] = JSON.parse(msg.data);
 
-
+        counter++;
         return;
     };
     socket.onclose = function () {
@@ -91,9 +91,9 @@ function QuizzStart() {
         themeId: idTheme
 
     }));
-
-
     let rechercheAdv = document.getElementById("rechercheAdv");
+
+
     let text2 = document.createElement("p");
     text2.innerText = "En recherche d'adversaire!!!";
 
@@ -103,55 +103,76 @@ function QuizzStart() {
     rechercheAdv.appendChild(text2);
     document.body.appendChild(rechercheAdv);
 
-    document.write();
+
     countdown();
+//
 
 }
 
+
 function countdown() {
-    console.log(msgWebSocket[0]['type']);
-    while(msgWebSocket[msgWebSocket.length].type==="need to wait" ||msgWebSocket[msgWebSocket.length].type==="no_player"){
+    myVar2 = window.setTimeout("countdown()", 2000);
+    console.log(msgWebSocket);
+//    console.log(msgWebSocket.length);
+    window.clearTimeout(10)
+    if (msgWebSocket[msgWebSocket.length - 1].type === "no_player") {
+        window.clearTimeout(myVar2);
+    }
+    if (msgWebSocket[msgWebSocket.length - 1].type === "need_to wait") {
+        window.clearTimeout(myVar2);
+
         let rechercheAdv = document.getElementById("rechercheAdv");
+        rechercheAdv.innerHTML = "";
         let text2 = document.createElement("p");
+        text2.setAttribute("class", "h1");
+        text2.setAttribute("id", "question");
+        text2.setAttribute("align", "center");
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
         document.body.appendChild(rechercheAdv);
+
     }
-    let rechercheAdv = document.getElementById("rechercheAdv");
-    let text2 = document.createElement("p");
-    text2.innerText = msgWebSocket[msgWebSocket.length].question.label;
+    if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond"){
+        document.getElementById('question').innerText= msgWebSocket[msgWebSocket.length - 1].questions.label;
+        document.getElementById('selectTheme').style="visibility: hidden";
+        document.getElementById('rechercheAdv').style="visibility: hidden";
+        console.log(msgWebSocket[msgWebSocket.length - 1]);
 
-    text2.setAttribute("class", "h1");
-    text2.setAttribute("id", "question");
-    text2.setAttribute("align", "center");
-    rechercheAdv.appendChild(text2);
+        //pour recup les questions/reponses
+       // console.log(msgWebSocket[msgWebSocket.length - 1].questions);             <-------
+        console.log(msgWebSocket[msgWebSocket.length - 1].possibleanswer)         //<-------
+
+        window.clearTimeout(myVar2);
+        afficheReponse();
+    }
+
+
 }
-
-function afficheReponse(arg) {
+let tabReponseAleat =[];
+function afficheReponse() {
     let tabNorm = [];
 
-    let maxQuestions = arg.length - 1;
-    for (let i = 0; i < arg.length; i++) {
-        tabNorm[i] = arg[i];
+    for (let i=0;i<4;i++){
+        tabNorm[i] = msgWebSocket[msgWebSocket.length - 1].possibleanswer[i];
     }
-    console.log(tabNorm)
+  //  console.log(tabNorm)
 
-    let var1 = entierAleatoire(0, maxQuestions);
-    let var2 = entierAleatoire(0, maxQuestions);
+    let var1 = entierAleatoire(0, 3);
+    let var2 = entierAleatoire(0, 3);
 
     while (var2 === var1) {
-        var2 = entierAleatoire(0, maxQuestions);
+        var2 = entierAleatoire(0, 3);
     }
-    let var3 = entierAleatoire(0, maxQuestions);
+    let var3 = entierAleatoire(0, 3);
 
     while (var3 === var1 || var3 === var2) {
-        var3 = entierAleatoire(0, maxQuestions);
+        var3 = entierAleatoire(0, 3);
     }
-    let var4 = entierAleatoire(0, maxQuestions);
+    let var4 = entierAleatoire(0, 3);
 
 
     while (var4 === var1 || var4 === var2 || var4 === var3) {
-        var4 = entierAleatoire(0, maxQuestions);
+        var4 = entierAleatoire(0, 3);
     }
     tabReponseAleat[0] = tabNorm[var1];
 
@@ -175,7 +196,9 @@ function afficheReponse(arg) {
 
 
     }
-
+    function entierAleatoire(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
 
 }
