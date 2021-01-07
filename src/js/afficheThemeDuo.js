@@ -62,7 +62,7 @@ try {
     socket.onmessage = function (msg) {
         console.log('Message received: ', msg.data);
         msgWebSocket[counter] = JSON.parse(msg.data);
-        counter++;
+
 
         return;
     };
@@ -103,7 +103,20 @@ function QuizzStart() {
     rechercheAdv.appendChild(text2);
     document.body.appendChild(rechercheAdv);
 
-    document.write();
+//    document.write();
 
+countdown();
+}
+
+function countdown() {
+
+   // console.log(msgWebSocket[1]);
+
+    if (msgWebSocket[1]===undefined){
+    }else {
+        console.log("coucou");
+    }
+        // Count down using javascript
+        window.setTimeout("countdown()", 1000);
 
 }
