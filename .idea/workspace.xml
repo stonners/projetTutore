@@ -19,23 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/quizzSoloStart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43__Default_Changelist_.xml" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_12_2020_15_43__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_15_06__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_15_06__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_15_15__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_15_15__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_03__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_03__Default_Changelist_.xml" afterDir="false" />
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_40__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_12_2020_17_40__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_12_2020_14_42__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_12_2020_14_42__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2020_16_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2020_16_25__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="update login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/quizzDuoStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/quizzDuoStart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/verifCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/verifCo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/verifInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/verifInscription.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +33,6 @@
   </component>
   <component name="ComposerSettings">
     <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,11 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/projetARendre" />
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../rest" />
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../merde/webrtc-videocall-javascript" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,13 +59,7 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\electron\src" />
     </key>
-<<<<<<< HEAD
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\CoteServ\projetARendre" />
-      <recent name="C:\wamp64\www\electron" />
-=======
     <key name="MoveFile.RECENT_KEYS">
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
       <recent name="C:\wamp64\www\electron\src" />
       <recent name="C:\wamp64\www\electron\src\css" />
     </key>
@@ -115,14 +87,17 @@
       <workItem from="1608988604584" duration="6532000" />
       <workItem from="1609074672085" duration="2536000" />
       <workItem from="1609094844396" duration="599000" />
-<<<<<<< HEAD
-      <workItem from="1609162416094" duration="7260000" />
-      <workItem from="1609247570091" duration="6206000" />
-      <workItem from="1609336340081" duration="8753000" />
-=======
       <workItem from="1609162416094" duration="325000" />
       <workItem from="1609336642742" duration="2639000" />
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
+      <workItem from="1609347064160" duration="420000" />
+      <workItem from="1609684027146" duration="2680000" />
+      <workItem from="1609853623896" duration="2171000" />
+      <workItem from="1609919433631" duration="1985000" />
+      <workItem from="1609942801999" duration="147000" />
+      <workItem from="1609943629369" duration="624000" />
+      <workItem from="1610016467819" duration="304000" />
+      <workItem from="1610026302133" duration="6553000" />
+      <workItem from="1610037001863" duration="4463000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -131,43 +106,51 @@
       <option name="project" value="LOCAL" />
       <updated>1608135226087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update login">
+      <created>1609944215782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609944215782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="azerty" />
-    <option name="LAST_COMMIT_MESSAGE" value="azerty" />
+    <MESSAGE value="update login" />
+    <option name="LAST_COMMIT_MESSAGE" value="update login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2669" y="-321" key="CommitChangelistDialog2" timestamp="1608135225014">
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-<<<<<<< HEAD
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1609336699951">
-      <screen x="0" y="0" width="1920" height="1040" />
-=======
-    <state x="565" y="228" key="FileChooserDialogImpl" timestamp="1609337092494">
-      <screen x="0" y="0" width="1467" height="864" />
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
+    <state x="568" y="228" key="FileChooserDialogImpl" timestamp="1610039658925">
+      <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="565" y="228" key="FileChooserDialogImpl/0.0.1467.864@0.0.1467.864" timestamp="1609337092494" />
+    <state x="565" y="228" key="FileChooserDialogImpl/0.0.1467.864@0.0.1467.864" timestamp="1609347072888" />
+    <state x="566" y="228" key="FileChooserDialogImpl/0.0.1470.864@0.0.1470.864" timestamp="1610026350322" />
+    <state x="568" y="228" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1610039658925" />
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-<<<<<<< HEAD
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1609336699951" />
-    <state x="-3068" y="-324" key="MergeDialog" timestamp="1608135189112">
-      <screen x="-3440" y="-350" width="2293" height="920" />
-=======
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1609074707568" />
     <state x="238" y="24" key="MergeDialog" timestamp="1609336693404">
       <screen x="0" y="0" width="1467" height="864" />
->>>>>>> 2b28510cf55b60d0b9654476c10e9dfbcd23d96f
     </state>
     <state x="238" y="24" key="MergeDialog/0.0.1467.864@0.0.1467.864" timestamp="1609336693404" />
     <state x="-3068" y="-324" key="MergeDialog/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135189112" />
@@ -175,15 +158,18 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608139235534" />
-    <state x="-2700" y="-157" key="Vcs.Push.Dialog.v2" timestamp="1608135316672">
-      <screen x="-3440" y="-350" width="2293" height="920" />
+    <state x="474" y="181" key="Vcs.Push.Dialog.v2" timestamp="1609944220475">
+      <screen x="0" y="0" width="1470" height="864" />
     </state>
+    <state x="474" y="181" key="Vcs.Push.Dialog.v2/0.0.1470.864@0.0.1470.864" timestamp="1609944220475" />
     <state x="-2700" y="-157" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135316672" />
-    <state x="618" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609336682878">
-      <screen x="0" y="0" width="1467" height="864" />
+    <state x="621" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610037052373">
+      <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="609" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1446.864@0.0.1446.864" timestamp="1609255997024" />
-    <state x="618" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1467.864@0.0.1467.864" timestamp="1609336682878" />
+    <state x="618" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1467.864@0.0.1467.864" timestamp="1609694888871" />
+    <state x="619" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1470.864@0.0.1470.864" timestamp="1610026336496" />
+    <state x="621" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1474.864@0.0.1474.864" timestamp="1610037052373" />
     <state x="-2475" y="24" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608139240500" />
     <state x="380" y="197" key="run.anything.popup" timestamp="1609255607671">
       <screen x="0" y="0" width="1446" height="864" />

@@ -63,7 +63,6 @@ try {
         console.log('Message received: ', msg.data);
         msgWebSocket[counter] = JSON.parse(msg.data);
         counter++;
-
         return;
     };
     socket.onclose = function () {
@@ -101,9 +100,79 @@ function QuizzStart() {
     text2.setAttribute("id", "question");
     text2.setAttribute("align", "center");
     rechercheAdv.appendChild(text2);
+
     document.body.appendChild(rechercheAdv);
 
     document.write();
+    countdown();
+
+}
+
+function countdown() {
+    console.log(msgWebSocket[0]['type']);
+    while(msgWebSocket[msgWebSocket.length].type==="need to wait" ||msgWebSocket[msgWebSocket.length].type==="no_player"){
+        let rechercheAdv = document.getElementById("rechercheAdv");
+        let text2 = document.createElement("p");
+        text2.innerText = "c'est le tour de votre adversaire";
+        rechercheAdv.appendChild(text2);
+        document.body.appendChild(rechercheAdv);
+    }
+    let rechercheAdv = document.getElementById("rechercheAdv");
+    let text2 = document.createElement("p");
+    text2.innerText = msgWebSocket[msgWebSocket.length].question.label;
+
+    text2.setAttribute("class", "h1");
+    text2.setAttribute("id", "question");
+    text2.setAttribute("align", "center");
+    rechercheAdv.appendChild(text2);
+}
+
+function afficheReponse(arg) {
+    let tabNorm = [];
+
+    let maxQuestions = arg.length - 1;
+    for (let i = 0; i < arg.length; i++) {
+        tabNorm[i] = arg[i];
+    }
+    console.log(tabNorm)
+
+    let var1 = entierAleatoire(0, maxQuestions);
+    let var2 = entierAleatoire(0, maxQuestions);
+
+    while (var2 === var1) {
+        var2 = entierAleatoire(0, maxQuestions);
+    }
+    let var3 = entierAleatoire(0, maxQuestions);
+
+    while (var3 === var1 || var3 === var2) {
+        var3 = entierAleatoire(0, maxQuestions);
+    }
+    let var4 = entierAleatoire(0, maxQuestions);
 
 
+    while (var4 === var1 || var4 === var2 || var4 === var3) {
+        var4 = entierAleatoire(0, maxQuestions);
+    }
+    tabReponseAleat[0] = tabNorm[var1];
+
+    tabReponseAleat[1] = tabNorm[var2];
+    tabReponseAleat[2] = tabNorm[var3];
+    tabReponseAleat[3] = tabNorm[var4];
+    console.log(tabReponseAleat)
+    let divReponse = document.getElementById("divBlock");
+    divReponse.textContent = ' ';
+    for (let i = 0; i < arg.length; i++) {
+        let response = document.createElement("div");
+
+        response.innerText = tabReponseAleat[i].label;
+
+        response.setAttribute("class", "h1");
+        response.setAttribute("id", tabReponseAleat[i].id);
+        response.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
+
+        response.onclick = clickResponse;
+        divReponse.appendChild(response);
+
+
+    }
 }

@@ -9,7 +9,7 @@ function verifInscrip() {
     $("#email").css("border", "2px solid black");
     $("#password").css("border", "2px solid black");
     $("#confPassword").css("border", "2px solid black");
-    console.log(correct);
+
 
     if ($("#nom").val() === "") {
         $("#nom").css("border", "2px solid red");
@@ -19,7 +19,7 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
+
     if ($("#prenom").val() === "") {
         $("#prenom").css("border", "2px solid red");
         correct = false;
@@ -28,7 +28,7 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
+
     if ($("#email").val() === "") {
         $("#email").css("border", "2px solid red");
         correct = false;
@@ -37,7 +37,18 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
+
+    if (!ValidateEmail($("#email").val())) {
+        $("#email").css("border", "2px solid red");
+        correct = false;
+        if (focus === false) {
+            $("#email").focus();
+            focus = true;
+        }
+    }
+
+
+
     if ($("#password").val() === "") {
         $("#password").css("border", "2px solid red");
         correct = false;
@@ -46,7 +57,7 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
+
     if ($("#confPassword").val() === "") {
         $("#confPassword").css("border", "2px solid red");
         correct = false;
@@ -55,7 +66,6 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
     if ($("#password").val() !== $("#confPassword").val()) {
         correct = false;
         if (focus === false) {
@@ -63,14 +73,11 @@ function verifInscrip() {
             focus = true;
         }
     }
-    console.log(correct);
     if (correct === false) {
         let text = "veullier remplir les champs en rouge";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
-        console.log(correct);
     } else {
-        console.log("test");
         let firstName = $("#nom").val();
         let lastName = $("#prenom").val();
         let email = $("#email").val();
@@ -98,10 +105,23 @@ function verifInscrip() {
 function emailVerif(json) {
 
      if (json!==0){
+
     window.location = "../index.html";
     }else {
         let text = "email déja utiliser !";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
+         $("#email").css("border", "2px solid red");
+         $("#email").focus();
+
+
     }
+}
+
+
+function ValidateEmail(mail)
+
+{
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
