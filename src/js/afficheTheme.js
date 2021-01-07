@@ -1,6 +1,6 @@
 let MainDiv = document.getElementById("MainDiv");
 let text = document.getElementById("text");
-let count =0;
+let count = 0;
 text.innerText = "Veuiller choisir un thème";
 
 text.setAttribute("class", "h1");
@@ -38,7 +38,14 @@ function afficheTheme(arg) {
         document.getElementById("selectTheme").onchange = QuizzStart;
     }
 
+    function QuizzStart() {
+        var chemin = window.location.pathname;
+        idTheme = document.getElementById("selectTheme").value;
+        console.log(idTheme);
 
+        document.location.href = "quizzSoloStart.html?data=" + idTheme;
+        //window.location = "quizzSoloStart.html/".idTheme
+    }
 
 
 }
