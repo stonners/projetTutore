@@ -14,7 +14,7 @@ function verifInf() {
             });
 
     } else {
-        let text = "veuiller remplir les champs";
+        let text = "Veuillez remplir les champs";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
 

@@ -217,7 +217,7 @@ function afficheReponseBonne(arg) {
 
     let divQuestion = document.getElementById("question");
     //calculer les bonne réponses
-    divQuestion.innerText = "Bravo, vous avez " + arg + " bonnes réponses";
+    divQuestion.innerText = "nombres de bonne réponse : " + arg ;
     let divReponse = document.getElementById("divBlock");
     divReponse.remove();
     countdown();
@@ -233,9 +233,9 @@ function countdown() {
     } else {
         // Update remaining seconds
         if (seconds > 1) {
-            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " secondes";
+            document.getElementById("counter").innerHTML = "Vous allez être redirigés dans  " + seconds + " secondes";
         } else {
-            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " seconde";
+            document.getElementById("counter").innerHTML = "Vous allez être redirigés dans  " + seconds + " seconde";
         }
         // Count down using javascript
         window.setTimeout("countdown()", 1000);
