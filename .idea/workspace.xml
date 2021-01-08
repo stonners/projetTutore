@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dadd9bd5-8b04-42d3-a648-5826479c2d25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <workItem from="1610037001863" duration="4463000" />
       <workItem from="1610058876715" duration="9791000" />
       <workItem from="1610102975977" duration="12085000" />
-      <workItem from="1610126083014" duration="6279000" />
+      <workItem from="1610126083014" duration="6873000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
