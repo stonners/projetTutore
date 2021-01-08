@@ -190,7 +190,8 @@ function afficheReponse() {
     console.log(tabReponseAleat)
 
     block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
-    
+    <button class="btn btn-primary" id="start">Demarrer la visioConf</button>
+    button=
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
         res.innerText = tabReponseAleat[i].label;
@@ -247,26 +248,23 @@ function compteur() {
 function clickResponse() {
     clearInterval(myVar);
 
-    function clickResponse() {
-        clearInterval(myVar);
+
+    socket.send(JSON.stringify({
+        type: 'quizz_duel_respond',
+        questionResponse: this.id
+    }));
 
 
-        socket.send(JSON.stringify({
-            type: 'quizz_duel_respond',
-            questionResponse: this.id
-        }));
+    console.log(document.getElementsByTagName("counter"));
+
+    console.log(document.getElementsByTagName("counter"));
 
 
-        console.log(document.getElementsByTagName("counter"));
+    let divCounter = document.getElementsByTagName("counter")
+    MainDiv.remove();
+    block.remove();
+    document.getElementById('rechercheAdv').style = "visibility: visible";
+    window.setTimeout("countdown()", 1000);
 
-        console.log(document.getElementsByTagName("counter"));
 
-        a6c3061ba00617b8e694ff39bbada81ac5a47c10
-        let divCounter = document.getElementsByTagName("counter")
-        MainDiv.remove();
-        block.remove();
-        document.getElementById('rechercheAdv').style = "visibility: visible";
-        window.setTimeout("countdown()", 1000);
-
-    }
 }

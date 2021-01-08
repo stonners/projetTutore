@@ -63,6 +63,7 @@ function verifInscrip() {
             focus = true;
         }
     }
+
     if (correct === false) {
         let text = "veullier remplir les champs en rouge";
         $("#erreur").text(text);
@@ -96,7 +97,7 @@ function verifInscrip() {
 function emailVerif(json) {
 
 if (json===1){
-        window.location = "../index.html";
+        window.location = "home.html";//"../index.html";
     } else {
         let text = "email déja utiliser !";
         $("#erreur").text(text);
