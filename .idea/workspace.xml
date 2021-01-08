@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dadd9bd5-8b04-42d3-a648-5826479c2d25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/electron.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/electron.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/afficheTheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheTheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoteServ/projetARendre" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/WebRTC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,18 +68,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\electron\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\electron\src" />
       <recent name="C:\wamp64\www\electron\src\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\electron\src\WebRTC" />
+      <recent name="C:\wamp64\www\electron\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b80cf555-75af-435b-9ae4-8da07e32d286" name="Default Changelist" comment="" />
+      <changelist id="dadd9bd5-8b04-42d3-a648-5826479c2d25" name="Default Changelist" comment="" />
       <created>1607440129268</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -102,6 +111,7 @@
       <workItem from="1610016467819" duration="304000" />
       <workItem from="1610026302133" duration="6553000" />
       <workItem from="1610037001863" duration="4463000" />
+      <workItem from="1610058876715" duration="4237000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -145,14 +155,14 @@
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610045025809">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610059776721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="228" key="FileChooserDialogImpl/0.0.1467.864@0.0.1467.864" timestamp="1609347072888" />
     <state x="566" y="228" key="FileChooserDialogImpl/0.0.1470.864@0.0.1470.864" timestamp="1610026350322" />
     <state x="568" y="228" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1610039658925" />
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610045025809" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610059776721" />
     <state x="311" y="29" key="MergeDialog" timestamp="1610041714534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

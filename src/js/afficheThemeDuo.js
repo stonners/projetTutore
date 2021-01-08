@@ -129,10 +129,12 @@ function countdown() {
         text2.setAttribute("id", "question");
         text2.setAttribute("align", "center");
         rechercheAdv.innerHTML=' ';
+        document.getElementById('question').style="visibility: hidden";
+        document.getElementById('selectTheme').style="visibility: hidden";
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
         document.body.appendChild(rechercheAdv);
-        window.setTimeout("countdown()", 3000);
+        window.setTimeout("countdown()", 1000);
 
     }
     if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond"){
@@ -185,22 +187,21 @@ function afficheReponse() {
     tabReponseAleat[3] = tabNorm[var4];
     console.log(tabReponseAleat)
 
-    block.setAttribute("style","display: flex;align-items: flex-start;")
+    block.setAttribute("style","display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
 
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
         res.innerText = tabReponseAleat[i].label;
         res.setAttribute("class", "h1");
         res.setAttribute("id", tabReponseAleat[i].id);
-       // res.setAttribute("style","display: flex; flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 24%;height: 24%")
-        console.log(res);
+        res.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
+
         res.onclick = clickResponse;
         block.append(res);
 
 
     }
 
-    document.body.appendChild(divReponse);
     function entierAleatoire(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -223,6 +224,7 @@ function compteur(){
             }
             if (cpt < 1) {
                 console.log("c'est fini");
+                clearInterval(myVar);
                 /* reponseDiv = document.getElementById("reponse");
                  reponseDiv.innerText = "Temps expiré";
                  reponseDiv.style.display = "block";
