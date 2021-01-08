@@ -129,7 +129,7 @@ function countdown() {
         text2.setAttribute("id", "question");
         text2.setAttribute("align", "center");
         rechercheAdv.innerHTML = ' ';
-        document.getElementById('question').style = "visibility: hidden";
+        //document.getElementById('question').style = "visibility: hidden";
         document.getElementById('selectTheme').style = "visibility: hidden";
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
