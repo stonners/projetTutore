@@ -1,5 +1,3 @@
-
-
 function QuizzSolo() {
     document.location.href = "quizzSolo.html";
 }
@@ -25,7 +23,7 @@ function Info(rep) {
     $("#classement").text(rep['rang'] + '/' + rep['total']);
 }
 
-function deconnexion(){
+function deconnexion() {
     sessionStorage.removeItem("token");
     document.location = '../index.html';
 }

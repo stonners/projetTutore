@@ -1,6 +1,6 @@
 let MainDiv = document.getElementById("MainDiv");
 let text = document.getElementById("text");
-let block= document.getElementById("block");
+let block = document.getElementById("block");
 let count = 0;
 text.innerText = "Veuiller choisir un thème";
 
@@ -65,12 +65,12 @@ try {
         msgWebSocket[counter] = JSON.parse(msg.data);
 
         counter++;
-        return;
+
     };
     socket.onclose = function () {
         console.log('connection is closed!');
 
-        return;
+
     };
 } catch (e) {
     console.log(e);
@@ -128,19 +128,19 @@ function countdown() {
         text2.setAttribute("class", "h1");
         text2.setAttribute("id", "question");
         text2.setAttribute("align", "center");
-        rechercheAdv.innerHTML=' ';
-        document.getElementById('question').style="visibility: hidden";
-        document.getElementById('selectTheme').style="visibility: hidden";
+        rechercheAdv.innerHTML = ' ';
+        document.getElementById('question').style = "visibility: hidden";
+        document.getElementById('selectTheme').style = "visibility: hidden";
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
         document.body.appendChild(rechercheAdv);
         window.setTimeout("countdown()", 1000);
 
     }
-    if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond"){
-        document.getElementById('question').innerText= msgWebSocket[msgWebSocket.length - 1].questions.label;
-        document.getElementById('selectTheme').style="visibility: hidden";
-        document.getElementById('rechercheAdv').style="visibility: hidden";
+    if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond") {
+        document.getElementById('question').innerText = msgWebSocket[msgWebSocket.length - 1].questions.label;
+        document.getElementById('selectTheme').style = "visibility: hidden";
+        document.getElementById('rechercheAdv').style = "visibility: hidden";
         console.log(msgWebSocket[msgWebSocket.length - 1]);
 
         //pour recup les questions/reponses
@@ -154,11 +154,13 @@ function countdown() {
 
 
 }
-let tabReponseAleat =[];
+
+let tabReponseAleat = [];
+
 function afficheReponse() {
     let tabNorm = [];
 
-    for (let i=0;i<4;i++){
+    for (let i = 0; i < 4; i++) {
         tabNorm[i] = msgWebSocket[msgWebSocket.length - 1].possibleanswer[i];
     }
     //  console.log(tabNorm)
@@ -187,7 +189,7 @@ function afficheReponse() {
     tabReponseAleat[3] = tabNorm[var4];
     console.log(tabReponseAleat)
 
-    block.setAttribute("style","display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
+    block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
 
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
@@ -208,10 +210,12 @@ function afficheReponse() {
 
 
 }
+
 let cpt = 10;
 let myVar;
-function compteur(){
-    let conteur=1;
+
+function compteur() {
+    let conteur = 1;
     if (conteur < 4) {
         let divCounter = document.createElement("counter");
         divCounter.setAttribute("class", "h1");
@@ -240,17 +244,29 @@ function compteur(){
     }
 }
 
-function clickResponse(){
-    clearInterval(myVar);1
-    socket.send(JSON.stringify({
-        type: 'quizz_duel_respond',
-        questionResponse: this.id
-    }));
-    console.log(  document.getElementsByTagName("counter"));
-    let divCounter = document.getElementsByTagName("counter")
-    MainDiv.remove();
-    block.remove();
-    document.getElementById('rechercheAdv').style="visibility: visible";
-    window.setTimeout("countdown()", 1000);
+function clickResponse() {
+    clearInterval(myVar);
 
+    function clickResponse() {
+        clearInterval(myVar);
+        
+
+        socket.send(JSON.stringify({
+            type: 'quizz_duel_respond',
+            questionResponse: this.id
+        }));
+
+        debugger
+        console.log(document.getElementsByTagName("counter"));
+
+        console.log(document.getElementsByTagName("counter"));
+
+        a6c3061ba00617b8e694ff39bbada81ac5a47c10
+        let divCounter = document.getElementsByTagName("counter")
+        MainDiv.remove();
+        block.remove();
+        document.getElementById('rechercheAdv').style = "visibility: visible";
+        window.setTimeout("countdown()", 1000);
+
+    }
 }

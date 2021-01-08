@@ -1,7 +1,7 @@
-if(sessionStorage.getItem('token')===null) {
+if (sessionStorage.getItem('token') === null) {
     document.location = '../index.html';
 }
-let api2 = 'http://projetarendre/api/token?token='+sessionStorage.getItem('token');
+let api2 = 'http://projetarendre/api/token?token=' + sessionStorage.getItem('token');
 fetch(api2, {
     method: 'GET'
 
@@ -12,8 +12,31 @@ fetch(api2, {
     });
 
 
-function repToken(rep){
-    if(rep===0){
+function repToken(rep) {
+    if (rep === 0) {
         document.location = '../index.html';
     }
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
 }
+
+function reponseVerif(rep) {
+if (rep === -2) {
+let text = "Identifiants invalid";
+$("#erreur").text(text);
+        $("#erreur").css("visibility", "visible");
+    } else {
+        sessionStorage.setItem('token', rep.token);
+        sessionStorage.setItem('id', rep.id);
+        document.location = 'html/home.html';
+    }
+}
+
+=======
+}
+>>>>>>> a6c3061ba00617b8e694ff39bbada81ac5a47c10
