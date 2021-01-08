@@ -2,11 +2,9 @@ let MainDiv = document.getElementById("MainDiv");
 let text = document.getElementById("text");
 let block = document.getElementById("block");
 let count = 0;
-text.innerText = "Veuiller choisir un thème";
 
-text.setAttribute("class", "h1");
-text.setAttribute("id", "question");
-MainDiv.appendChild(text);
+
+
 
 
 fetch('http://projetarendre/api/themes', {
@@ -129,7 +127,7 @@ function countdown() {
         text2.setAttribute("id", "question");
         text2.setAttribute("align", "center");
         rechercheAdv.innerHTML = ' ';
-        //document.getElementById('question').style = "visibility: hidden";
+
         document.getElementById('selectTheme').style = "visibility: hidden";
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
@@ -138,7 +136,7 @@ function countdown() {
 
     }
     if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond") {
-        document.getElementById('question').innerText = msgWebSocket[msgWebSocket.length - 1].questions.label;
+        document.getElementById('text').innerText = msgWebSocket[msgWebSocket.length - 1].questions.label;
         document.getElementById('selectTheme').style = "visibility: hidden";
         document.getElementById('rechercheAdv').style = "visibility: hidden";
 
@@ -213,8 +211,9 @@ let myVar;
 function compteur() {
     let conteur = 1;
     if (conteur < 4) {
-        let divCounter = document.createElement("counter");
+        let divCounter = document.getElementById("counter");
         divCounter.setAttribute("class", "h1");
+        divCounter.innerText = " ";
         divCounter.innerText = cpt + "";
         MainDiv.appendChild(divCounter);
         myVar = setInterval(function () {
@@ -242,7 +241,7 @@ function compteur() {
 
 function clickResponse() {
     clearInterval(myVar);
-
+    cpt = 10;
 
     socket.send(JSON.stringify({
         type: 'quizz_duel_respond',
@@ -256,7 +255,7 @@ function clickResponse() {
 
 
     let divCounter = document.getElementsByTagName("counter")
-    MainDiv.innerHTML=' ';
+   // MainDiv.innerHTML=' ';
     block.innerHTML=' ';
     document.getElementById('rechercheAdv').style = "visibility: visible";
     window.setTimeout("countdown()", 1000);
