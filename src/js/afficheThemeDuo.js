@@ -82,6 +82,7 @@ function QuizzStart() {
     idTheme = document.getElementById("selectTheme").value;
 
 
+
     socket.send(JSON.stringify({
         type: 'quizz_duel_start',
         user_id: idUser
@@ -241,11 +242,13 @@ function compteur(){
 }
 
 function clickResponse(){
-    clearInterval(myVar);1
+    clearInterval(myVar);
     socket.send(JSON.stringify({
         type: 'quizz_duel_respond',
-        questionResponse: this.id
+        questionResponse: this.id,
+        user_id: idUser
     }));
+    debugger
     console.log(  document.getElementsByTagName("counter"));
     let divCounter = document.getElementsByTagName("counter")
     MainDiv.remove();
