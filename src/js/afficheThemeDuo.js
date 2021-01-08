@@ -190,8 +190,8 @@ function afficheReponse() {
     console.log(tabReponseAleat)
 
     block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
-    <button class="btn btn-primary" id="start">Demarrer la visioConf</button>
-    button=
+  //  <button class="btn btn-primary" id="start">Demarrer la visioConf</button>
+    button=document.createElement("button");
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
         res.innerText = tabReponseAleat[i].label;
