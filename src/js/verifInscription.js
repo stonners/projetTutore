@@ -39,7 +39,6 @@ function verifInscrip() {
     }
 
 
-
     if ($("#password").val() === "") {
         $("#password").css("border", "2px solid red");
         correct = false;
@@ -93,20 +92,19 @@ function verifInscrip() {
 
     }
 }
-function emailVerif(json) {
-    console.log(json);
-    if (json!==0){
 
-    window.location = "../index.html";
-    }else {
+function emailVerif(json) {
+
+if (json===1){
+        window.location = "../index.html";
+    } else {
         let text = "email déja utiliser !";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
-         $("#email").css("border", "2px solid red");
-         $("#email").focus();
+        $("#email").css("border", "2px solid red");
+        $("#email").focus();
 
 
     }
 
 }
-
