@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dadd9bd5-8b04-42d3-a648-5826479c2d25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/html/simplePeer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebRTC/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebRTC/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/quizzDuo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/quizzDuo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/afficheThemeDuo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/verifInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/verifInscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/connexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/connexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/verifCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/verifCo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +110,7 @@
       <workItem from="1610026302133" duration="6553000" />
       <workItem from="1610037001863" duration="4463000" />
       <workItem from="1610058876715" duration="9791000" />
-      <workItem from="1610102975977" duration="3085000" />
+      <workItem from="1610102975977" duration="10051000" />
     </task>
     <task id="LOCAL-00001" summary="azerty">
       <created>1608135226087</created>
@@ -145,18 +150,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="update login" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610118594404">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610118594404" />
     <state x="-2669" y="-321" key="CommitChangelistDialog2" timestamp="1608135225014">
       <screen x="-3440" y="-350" width="2293" height="920" />
     </state>
     <state x="-2669" y="-321" key="CommitChangelistDialog2/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608135225014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610102997464">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1610114786267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="228" key="FileChooserDialogImpl/0.0.1467.864@0.0.1467.864" timestamp="1609347072888" />
     <state x="566" y="228" key="FileChooserDialogImpl/0.0.1470.864@0.0.1470.864" timestamp="1610026350322" />
     <state x="568" y="228" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1610039658925" />
     <state x="-2556" y="-108" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@-3440.-350.2293.920" timestamp="1608647977641" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610102997464" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-3440.-350.2293.920@0.0.1920.1040" timestamp="1610114786267" />
     <state x="311" y="29" key="MergeDialog" timestamp="1610108422995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

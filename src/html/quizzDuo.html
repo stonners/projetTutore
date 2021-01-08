@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -15,7 +16,36 @@
 <select class="form-control" id="selectTheme" style=" align:center">
 
 </select>
-<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Reception</h2>
+            <video height="200px" id="receiver-video" width="100%"></video>
+
+            <p>
+                <button class="btn btn-primary" id="start">Demarrer la visioConf</button>
+            </p>
+            <textarea id="offer"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <h2>Envoi</h2>
+            <video height="200px" id="emitter-video" width="100%"></video>
+            <p>
+                <button class="btn btn-primary" id="receive">Recevoir la visioConf</button>
+            </p>
+            <form id="incoming">
+                <div>
+                    <textarea></textarea>
+                </div>
+                <p>
+                    <button class="btn btn-primary" type="submit">Enregistrer l'offre</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <br>
 <div id="rechercheAdv"></div>
 <div id="block"></div>
 
@@ -25,6 +55,8 @@
 </script>
 <script src="../js/verifCo.js"></script>
 <script src="../js/afficheThemeDuo.js"></script>
+<script src="../WebRTC/simplePeer.js"></script>
+<script src="../WebRTC/app.js"></script>
 </body>
 </html>
 <script>console.log(sessionStorage.getItem('token'))</script>

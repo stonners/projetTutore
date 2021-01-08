@@ -21,6 +21,7 @@ fetch('http://projetarendre/api/themes', {
 function afficheTheme(arg) {
     let option = document.createElement("option")
     let select = document.getElementById("selectTheme");
+    let caseImage = document.getElementById("caseImage");
     option.innerText = "--Sélectionner un theme--";
     select.appendChild(option);
 
@@ -101,6 +102,7 @@ function QuizzStart() {
     text2.setAttribute("class", "h1");
     text2.setAttribute("id", "question");
     text2.setAttribute("align", "center");
+    rechercheAdv.innerHTML=" ";
     rechercheAdv.appendChild(text2);
     document.body.appendChild(rechercheAdv);
 
@@ -114,14 +116,12 @@ function QuizzStart() {
 function countdown() {
     myVar2 = window.setTimeout("countdown()", 1000);
     console.log(msgWebSocket);
-//    console.log(msgWebSocket.length);
     if (msgWebSocket[msgWebSocket.length - 1].type === "no_player") {
         window.clearTimeout(myVar2);
         window.setTimeout("countdown()", 1000);
     }
     if (msgWebSocket[msgWebSocket.length - 1].type === "need_to wait") {
         window.clearTimeout(myVar2);
-        console.log('cc');
         let rechercheAdv = document.getElementById("rechercheAdv");
 
         let text2 = document.createElement("p");
@@ -141,11 +141,8 @@ function countdown() {
         document.getElementById('question').innerText = msgWebSocket[msgWebSocket.length - 1].questions.label;
         document.getElementById('selectTheme').style = "visibility: hidden";
         document.getElementById('rechercheAdv').style = "visibility: hidden";
-        console.log(msgWebSocket[msgWebSocket.length - 1]);
 
         //pour recup les questions/reponses
-        // console.log(msgWebSocket[msgWebSocket.length - 1].questions);             <-------
-        console.log(msgWebSocket[msgWebSocket.length - 1].possibleanswer)         //<-------
 
         window.clearTimeout(myVar2);
         afficheReponse()
@@ -163,7 +160,6 @@ function afficheReponse() {
     for (let i = 0; i < 4; i++) {
         tabNorm[i] = msgWebSocket[msgWebSocket.length - 1].possibleanswer[i];
     }
-    //  console.log(tabNorm)
 
     let var1 = entierAleatoire(0, 3);
     let var2 = entierAleatoire(0, 3);
@@ -187,17 +183,16 @@ function afficheReponse() {
     tabReponseAleat[1] = tabNorm[var2];
     tabReponseAleat[2] = tabNorm[var3];
     tabReponseAleat[3] = tabNorm[var4];
-    console.log(tabReponseAleat)
 
-    block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
-  //  <button class="btn btn-primary" id="start">Demarrer la visioConf</button>
-    button=document.createElement("button");
+    block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 25%")
+
+
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
         res.innerText = tabReponseAleat[i].label;
         res.setAttribute("class", "h1");
         res.setAttribute("id", tabReponseAleat[i].id);
-        res.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
+        res.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:100%; border:1px;border: groove;border-color: crimson;");
 
         res.onclick = clickResponse;
         block.append(res);
