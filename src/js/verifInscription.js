@@ -48,7 +48,6 @@ function verifInscrip() {
     }
 
 
-
     if ($("#password").val() === "") {
         $("#password").css("border", "2px solid red");
         correct = false;
@@ -102,26 +101,25 @@ function verifInscrip() {
 
     }
 }
+
 function emailVerif(json) {
 
-     if (json!==0){
+    if (json !== 0) {
 
-    window.location = "../index.html";
-    }else {
+        window.location = "../index.html";
+    } else {
         let text = "email déja utiliser !";
         $("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
-         $("#email").css("border", "2px solid red");
-         $("#email").focus();
+        $("#email").css("border", "2px solid red");
+        $("#email").focus();
 
 
     }
 }
 
 
-function ValidateEmail(mail)
-
-{
+function ValidateEmail(mail) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }

@@ -27,7 +27,7 @@ function reponseVerif(rep) {
         $("#erreur").css("visibility", "visible");
     } else {
         sessionStorage.setItem('token', rep.token);
-        sessionStorage.setItem('id',rep.id);
+        sessionStorage.setItem('id', rep.id);
         document.location = 'html/home.html';
     }
 }

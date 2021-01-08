@@ -71,8 +71,9 @@ function afficheQuestion(numberQuestion) {
 
 
 let cpt = 10;
+
 function counter(conteur) {
-    console.log("conteur:" +conteur)
+    console.log("conteur:" + conteur)
     let MainDiv = document.getElementById("MainDiv");
     if (conteur < 4) {
         let divCounter = document.getElementById("counter");
@@ -80,13 +81,13 @@ function counter(conteur) {
         divCounter.innerText = cpt + "";
         MainDiv.appendChild(divCounter);
         myVar = setInterval(function () {
-           console.log("testtttt")
+            console.log("testtttt")
             --cpt;
             if (cpt > -1) {
                 divCounter.innerText = cpt + '';
             }
             if (cpt < 1) {
-                       console.log("c'est fini");
+                console.log("c'est fini");
                 /* reponseDiv = document.getElementById("reponse");
                  reponseDiv.innerText = "Temps expiré";
                  reponseDiv.style.display = "block";
@@ -152,7 +153,7 @@ function afficheReponse(arg) {
     tabReponseAleat[1] = tabNorm[var2];
     tabReponseAleat[2] = tabNorm[var3];
     tabReponseAleat[3] = tabNorm[var4];
-console.log(tabReponseAleat)
+    console.log(tabReponseAleat)
     let divReponse = document.getElementById("divBlock");
     divReponse.textContent = ' ';
     for (let i = 0; i < arg.length; i++) {
@@ -174,10 +175,10 @@ console.log(tabReponseAleat)
 function clickResponse() {
 
 
-     formReponse.append("idReponse"+conteurQuestion,this.id);
+    formReponse.append("idReponse" + conteurQuestion, this.id);
     clearInterval(myVar);
     if (conteurQuestion < 4) {
-cpt =10;
+        cpt = 10;
         console.log(tabQuestionAleat[conteurQuestion - 1].id);
         console.log("question" + conteurQuestion);
         formQuestion.append("question" + conteurQuestion, tabQuestionAleat[conteurQuestion - 1].id);
@@ -212,20 +213,21 @@ cpt =10;
             });
 
 
-
     }
 }
-function afficheReponseBonne(arg){
+
+function afficheReponseBonne(arg) {
 
     let divQuestion = document.getElementById("question");
     //calculer les bonne réponses
-    divQuestion.innerText="Bravo, vous avez "+arg+" bonnes réponses";
+    divQuestion.innerText = "Bravo, vous avez " + arg + " bonnes réponses";
     let divReponse = document.getElementById("divBlock");
     divReponse.remove();
     countdown();
 }
 
-let seconds=7;
+let seconds = 7;
+
 function countdown() {
     seconds = seconds - 1;
     if (seconds < 0) {
@@ -233,10 +235,10 @@ function countdown() {
         window.location = "home.html";
     } else {
         // Update remaining seconds
-        if (seconds>1){
-        document.getElementById("counter").innerHTML = "Vous allez être rediriger dans "+seconds+" secondes";
-        }else {
-            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans "+seconds+" seconde";
+        if (seconds > 1) {
+            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " secondes";
+        } else {
+            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " seconde";
         }
         // Count down using javascript
         window.setTimeout("countdown()", 1000);
