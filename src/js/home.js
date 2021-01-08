@@ -1,3 +1,5 @@
+
+
 function QuizzSolo() {
     document.location.href = "quizzSolo.html";
 }
@@ -21,4 +23,9 @@ function Info(rep) {
         document.location = 'index.html';
     $("#point").text(rep.points);
     $("#classement").text(rep['rang'] + '/' + rep['total']);
+}
+
+function deconnexion(){
+    sessionStorage.removeItem("token");
+    document.location = '../index.html';
 }

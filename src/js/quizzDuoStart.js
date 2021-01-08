@@ -44,11 +44,9 @@ function sauvegardeQuestion(arg) {
         var4 = entierAleatoire(0, maxQuestions);
     }
     tabQuestionAleat[0] = tabNorm[var1];
-
     tabQuestionAleat[1] = tabNorm[var2];
     tabQuestionAleat[2] = tabNorm[var3];
     tabQuestionAleat[3] = tabNorm[var4];
-
     afficheQuestion(conteurQuestion);
 }
 
@@ -153,7 +151,10 @@ function afficheReponse(arg) {
     tabReponseAleat[2] = tabNorm[var3];
     tabReponseAleat[3] = tabNorm[var4];
 console.log(tabReponseAleat)
+
     let divReponse = document.getElementById("divBlock");
+    divReponse.style="display: flex; flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 80%";
+
     divReponse.textContent = ' ';
     for (let i = 0; i < arg.length; i++) {
         let response = document.createElement("div");
