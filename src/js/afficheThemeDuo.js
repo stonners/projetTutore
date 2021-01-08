@@ -190,7 +190,7 @@ function afficheReponse() {
     console.log(tabReponseAleat)
 
     block.setAttribute("style", "display: flex;flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 70%")
-
+    
     for (let i = 0; i < 4; i++) {
         let res = document.createElement("div");
         res.innerText = tabReponseAleat[i].label;
@@ -249,14 +249,14 @@ function clickResponse() {
 
     function clickResponse() {
         clearInterval(myVar);
-        
+
 
         socket.send(JSON.stringify({
             type: 'quizz_duel_respond',
             questionResponse: this.id
         }));
 
-        debugger
+
         console.log(document.getElementsByTagName("counter"));
 
         console.log(document.getElementsByTagName("counter"));

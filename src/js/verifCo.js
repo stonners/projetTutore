@@ -16,13 +16,7 @@ function repToken(rep) {
     if (rep === 0) {
         document.location = '../index.html';
     }
-    <
-    <
-    <
-    <
-    <
-    <
-    < HEAD
+
 }
 
 function reponseVerif(rep) {
@@ -37,6 +31,4 @@ $("#erreur").text(text);
     }
 }
 
-=======
-}
->>>>>>> a6c3061ba00617b8e694ff39bbada81ac5a47c10
+
