@@ -256,8 +256,8 @@ function clickResponse() {
 
 
     let divCounter = document.getElementsByTagName("counter")
-    MainDiv.remove();
-    block.remove();
+    MainDiv.innerHTML=' ';
+    block.innerHTML=' ';
     document.getElementById('rechercheAdv').style = "visibility: visible";
     window.setTimeout("countdown()", 1000);
 
