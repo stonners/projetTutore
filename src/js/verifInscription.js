@@ -95,7 +95,7 @@ function verifInscrip() {
 
 function emailVerif(json) {
 
-if (json===1){
+if (json!==0){
         window.location = "../index.html";
     } else {
         let text = "email déja utiliser !";
