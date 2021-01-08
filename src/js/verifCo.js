@@ -1,29 +1,34 @@
-$("#verif").on('click', verifInf);
+if (sessionStorage.getItem('token') === null) {
+    document.location = '../index.html';
+}
+let api2 = 'http://projetarendre/api/token?token=' + sessionStorage.getItem('token');
+fetch(api2, {
+    method: 'GET'
 
-function verifInf() {
-    if ($("#password").val() !== "" && $("#username").val() !== "") {
-        let api = 'http://projetarendre/api/user/login?username=' + $("#username").val() + '&Password=' + $("#password").val();
-        fetch(api, {
-            method: 'GET'
+}).then(response => response.json())
+    .then(json => repToken(json))
+    .catch(function (err) {
+        console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+    });
 
-        }).then(response => response.json())
-            .then(json => reponseVerif(json))
-            .catch(function (err) {
-                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
-            });
 
-    } else {
-        let text = "veuiller remplir les champs";
-        $("#erreur").text(text);
-        $("#erreur").css("visibility", "visible");
-
+function repToken(rep) {
+    if (rep === 0) {
+        document.location = '../index.html';
     }
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
 }
 
 function reponseVerif(rep) {
-    if (rep === -2) {
-        let text = "Identifiants invalid";
-        $("#erreur").text(text);
+if (rep === -2) {
+let text = "Identifiants invalid";
+$("#erreur").text(text);
         $("#erreur").css("visibility", "visible");
     } else {
         sessionStorage.setItem('token', rep.token);
@@ -32,3 +37,6 @@ function reponseVerif(rep) {
     }
 }
 
+=======
+}
+>>>>>>> a6c3061ba00617b8e694ff39bbada81ac5a47c10

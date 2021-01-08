@@ -44,11 +44,9 @@ function sauvegardeQuestion(arg) {
         var4 = entierAleatoire(0, maxQuestions);
     }
     tabQuestionAleat[0] = tabNorm[var1];
-
     tabQuestionAleat[1] = tabNorm[var2];
     tabQuestionAleat[2] = tabNorm[var3];
     tabQuestionAleat[3] = tabNorm[var4];
-
     afficheQuestion(conteurQuestion);
 }
 
@@ -153,11 +151,25 @@ function afficheReponse(arg) {
     tabReponseAleat[1] = tabNorm[var2];
     tabReponseAleat[2] = tabNorm[var3];
     tabReponseAleat[3] = tabNorm[var4];
-    console.log(tabReponseAleat)
-    let divReponse = document.getElementById("divBlock");
-    divReponse.textContent = ' ';
-    for (let i = 0; i < arg.length; i++) {
-        let response = document.createElement("div");
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
+        console.log(tabReponseAleat)
+=======
+console.log(tabReponseAleat)
+
+>>>>>>> a6c3061ba00617b8e694ff39bbada81ac5a47c10
+let divReponse = document.getElementById("divBlock");
+    divReponse.style="display: flex; flex-direction: row;justify-content: space-between;align-items: flex-end;align-content: center;width: 100%;height: 80%";
+
+divReponse.textContent = ' ';
+for (let i = 0; i
+    < arg.length; i++) {
+let response = document.createElement("div");
 
         response.innerText = tabReponseAleat[i].label;
 
@@ -165,17 +177,17 @@ function afficheReponse(arg) {
         response.setAttribute("id", tabReponseAleat[i].id);
         response.setAttribute("style", "border:10%; margin-left: 5px; margin-right: 5px;text-align:center; width:25%;height:25%; border:1px;border: groove;border-color: crimson;");
 
-        response.onclick = clickResponse;
-        divReponse.appendChild(response);
+response.onclick = clickResponse;
+divReponse.appendChild(response);
 
 
-    }
+}
 }
 
 function clickResponse() {
 
 
-    formReponse.append("idReponse" + conteurQuestion, this.id);
+formReponse.append("idReponse" + conteurQuestion, this.id);
     clearInterval(myVar);
     if (conteurQuestion < 4) {
         cpt = 10;
@@ -203,17 +215,17 @@ function clickResponse() {
 
         console.log(formReponse);
         fetch('http://projetarendre/api/PossibleAnswer/correction/', {
-            method: 'POST',
-            body: formReponse
-        })
-            .then(response => response.json())
-            .then(json => afficheReponseBonne(json))
-            .catch(function (err) {
-                console.log("il y a eu un problème avec l'opération fetch : " + err.message);
-            });
+method: 'POST',
+body: formReponse
+})
+.then(response => response.json())
+.then(json => afficheReponseBonne(json))
+.catch(function (err) {
+    console.log("il y a eu un problème avec l'opération fetch : " + err.message);
+});
 
 
-    }
+}
 }
 
 function afficheReponseBonne(arg) {
@@ -231,16 +243,16 @@ let seconds = 7;
 function countdown() {
     seconds = seconds - 1;
     if (seconds < 0) {
-        // Chnage your redirection link here
-        window.location = "home.html";
-    } else {
-        // Update remaining seconds
-        if (seconds > 1) {
-            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " secondes";
-        } else {
-            document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " seconde";
-        }
-        // Count down using javascript
-        window.setTimeout("countdown()", 1000);
-    }
+    // Chnage your redirection link here
+    window.location = "home.html";
+} else {
+    // Update remaining seconds
+    if (seconds > 1) {
+    document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " secondes";
+} else {
+    document.getElementById("counter").innerHTML = "Vous allez être rediriger dans " + seconds + " seconde";
+}
+    // Count down using javascript
+    window.setTimeout("countdown()", 1000);
+}
 }

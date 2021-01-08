@@ -22,3 +22,8 @@ function Info(rep) {
     $("#point").text(rep.points);
     $("#classement").text(rep['rang'] + '/' + rep['total']);
 }
+
+function deconnexion() {
+    sessionStorage.removeItem("token");
+    document.location = '../index.html';
+}

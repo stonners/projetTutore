@@ -246,17 +246,27 @@ function compteur() {
 
 function clickResponse() {
     clearInterval(myVar);
-    socket.send(JSON.stringify({
-        type: 'quizz_duel_respond',
-        questionResponse: this.id,
-        user_id: idUser
-    }));
-    debugger
-    console.log(document.getElementsByTagName("counter"));
-    let divCounter = document.getElementsByTagName("counter")
-    MainDiv.remove();
-    block.remove();
-    document.getElementById('rechercheAdv').style = "visibility: visible";
-    window.setTimeout("countdown()", 1000);
 
+    function clickResponse() {
+        clearInterval(myVar);
+        
+
+        socket.send(JSON.stringify({
+            type: 'quizz_duel_respond',
+            questionResponse: this.id
+        }));
+
+        debugger
+        console.log(document.getElementsByTagName("counter"));
+
+        console.log(document.getElementsByTagName("counter"));
+
+        a6c3061ba00617b8e694ff39bbada81ac5a47c10
+        let divCounter = document.getElementsByTagName("counter")
+        MainDiv.remove();
+        block.remove();
+        document.getElementById('rechercheAdv').style = "visibility: visible";
+        window.setTimeout("countdown()", 1000);
+
+    }
 }
