@@ -112,7 +112,7 @@ function QuizzStart() {
 
 
 function countdown() {
-    myVar2 = window.setTimeout("countdown()", 1000);
+    myVar2 = window.setTimeout("countdown()", 100);
     console.log(msgWebSocket);
     if (msgWebSocket[msgWebSocket.length - 1].type === "no_player") {
         window.clearTimeout(myVar2);
@@ -132,7 +132,7 @@ function countdown() {
         text2.innerText = "c'est le tour de votre adversaire";
         rechercheAdv.appendChild(text2);
         document.body.appendChild(rechercheAdv);
-        window.setTimeout("countdown()", 1000);
+        window.setTimeout("countdown()", 500);
 
     }
     if (msgWebSocket[msgWebSocket.length - 1].type === "need_to_respond") {
@@ -145,6 +145,21 @@ function countdown() {
         window.clearTimeout(myVar2);
         afficheReponse()
         compteur();
+    }
+    if (msgWebSocket[msgWebSocket.length - 1].type === "equality") {
+        document.getElementById("counter").style = "visibility: hidden";
+        document.getElementById("text").innerText=" Égalité! Vous gagnez 5 points!"
+        window.clearTimeout(myVar2);
+    }
+    if (msgWebSocket[msgWebSocket.length - 1].type === "winner") {
+        document.getElementById("counter").style = "visibility: hidden";
+        document.getElementById("text").innerText=" Victoire! Vous gagnez 10 points!"
+        window.clearTimeout(myVar2);
+    }
+    if (msgWebSocket[msgWebSocket.length - 1].type === "loser") {
+        document.getElementById("counter").style = "visibility: hidden";
+        document.getElementById("text").innerText=" Défaite! Vous gagnez 0 points!"
+        window.clearTimeout(myVar2);
     }
 
 
