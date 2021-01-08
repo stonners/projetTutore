@@ -38,15 +38,6 @@ function verifInscrip() {
         }
     }
 
-    if (!ValidateEmail($("#email").val())) {
-        $("#email").css("border", "2px solid red");
-        correct = false;
-        if (focus === false) {
-            $("#email").focus();
-            focus = true;
-        }
-    }
-
 
 
     if ($("#password").val() === "") {
@@ -103,8 +94,8 @@ function verifInscrip() {
     }
 }
 function emailVerif(json) {
-
-     if (json!==0){
+    console.log(json);
+    if (json!==0){
 
     window.location = "../index.html";
     }else {
@@ -116,10 +107,6 @@ function emailVerif(json) {
 
 
     }
+
 }
 
-
-function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
